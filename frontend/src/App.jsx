@@ -59,7 +59,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Pizzarush_App/">
       <Routes>
         {}
         <Route path="/" element={<PublicLayout><MenuPage /></PublicLayout>} />
