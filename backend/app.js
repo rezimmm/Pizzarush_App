@@ -21,6 +21,7 @@ const errorHandler = require('./middleware/errorMiddleware');
 const notFound = require('./middleware/notFound');
 
 const app = express();
+app.set('trust proxy', 1);
 
 app.use(cors({
   origin: [
