@@ -25,6 +25,7 @@ import AdminDashboardPage from './pages/admin/AdminDashboardPage';
 import AdminOrdersPage from './pages/admin/AdminOrdersPage';
 import AdminInventoryPage from './pages/admin/AdminInventoryPage';
 import AdminPizzasPage from './pages/admin/AdminPizzasPage';
+import AdminAnalyticsPage from './pages/admin/AdminAnalyticsPage';
 
 function PublicLayout({ children }) {
   return (
@@ -104,6 +105,7 @@ export default function App() {
           <Route path="orders" element={<AdminOrdersPage />} />
           <Route path="inventory" element={<AdminInventoryPage />} />
           <Route path="pizzas" element={<AdminPizzasPage />} />
+          <Route path="analytics" element={<AdminAnalyticsPage />} />
         </Route>
 
         {}
