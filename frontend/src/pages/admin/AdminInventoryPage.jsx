@@ -10,13 +10,13 @@ export default function AdminInventoryPage() {
   const [editId, setEditId] = useState(null);
   const [editValues, setEditValues] = useState({});
   const [showAdd, setShowAdd] = useState(false);
-  const [newItem, setNewItem] = useState({ name: '', category: 'Topping', quantity: 0, unit: 'grams', lowStockThreshold: 100 });
+  const [newItem, setNewItem] = useState({ itemName: '', category: 'veggie', quantity: 0, unit: 'units', threshold: 100 });
 
   const fetchInventory = async () => {
     setIsLoading(true);
     try {
       const res = await api.get('/inventory');
-      setItems(res.data.data?.items || []);
+      setItems(res.data.data?.inventory || []);
     } catch {
       toast.error('Failed to load inventory');
     } finally {
@@ -59,14 +59,14 @@ export default function AdminInventoryPage() {
       await api.post('/inventory', newItem);
       toast.success('Item added!');
       setShowAdd(false);
-      setNewItem({ name: '', category: 'Topping', quantity: 0, unit: 'grams', lowStockThreshold: 100 });
+      setNewItem({ itemName: '', category: 'veggie', quantity: 0, unit: 'units', threshold: 100 });
       fetchInventory();
     } catch (err) {
       toast.error(err.response?.data?.message || 'Add failed');
     }
   };
 
-  const CATEGORIES = ['Dough', 'Topping', 'Cheese', 'Sauce', 'Packaging'];
+  const CATEGORIES = ['base', 'sauce', 'cheese', 'veggie', 'meat'];
 
   return (
     <div className="p-6 lg:p-8 space-y-5">
@@ -92,7 +92,7 @@ export default function AdminInventoryPage() {
           <form onSubmit={handleAddItem} className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             <div className="sm:col-span-2">
               <label className="input-label">Name</label>
-              <input value={newItem.name} onChange={(e) => setNewItem((p) => ({ ...p, name: e.target.value }))}
+              <input value={newItem.itemName} onChange={(e) => setNewItem((p) => ({ ...p, itemName: e.target.value }))}
                 required className="input-field" placeholder="e.g. Mozzarella Cheese" />
             </div>
             <div>
@@ -111,12 +111,12 @@ export default function AdminInventoryPage() {
               <label className="input-label">Unit</label>
               <select value={newItem.unit} onChange={(e) => setNewItem((p) => ({ ...p, unit: e.target.value }))}
                 className="input-field">
-                {['grams', 'kilograms', 'liters', 'pieces', 'packets'].map((u) => <option key={u} value={u}>{u}</option>)}
+                {['units', 'grams', 'kilograms', 'liters', 'pieces', 'packets'].map((u) => <option key={u} value={u}>{u}</option>)}
               </select>
             </div>
             <div>
               <label className="input-label">Low Stock Alert</label>
-              <input type="number" value={newItem.lowStockThreshold} onChange={(e) => setNewItem((p) => ({ ...p, lowStockThreshold: +e.target.value }))}
+              <input type="number" value={newItem.threshold} onChange={(e) => setNewItem((p) => ({ ...p, threshold: +e.target.value }))}
                 required className="input-field" min="0" />
             </div>
             <div className="sm:col-span-3 flex justify-end">
@@ -146,13 +146,13 @@ export default function AdminInventoryPage() {
               </thead>
               <tbody className="divide-y divide-surface-border">
                 {items.map((item, idx) => {
-                  const isLow = item.quantity <= item.lowStockThreshold;
+                  const isLow = item.quantity <= item.threshold;
                   const isEditing = editId === item._id;
                   return (
                     <motion.tr key={item._id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: idx * 0.03 }}
                       className="hover:bg-surface-elevated/40 transition-colors"
                     >
-                      <td className="px-4 py-3 font-medium text-white">{item.name}</td>
+                      <td className="px-4 py-3 font-medium text-white">{item.itemName}</td>
                       <td className="px-4 py-3 text-gray-400 hidden sm:table-cell">{item.category}</td>
                       <td className="px-4 py-3">
                         {isEditing ? (
@@ -175,7 +175,7 @@ export default function AdminInventoryPage() {
                             min="0"
                           />
                         ) : (
-                          <span>{item.lowStockThreshold} {item.unit}</span>
+                          <span>{item.threshold} {item.unit}</span>
                         )}
                       </td>
                       <td className="px-4 py-3">
