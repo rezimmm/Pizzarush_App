@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -7,6 +7,7 @@ import { fetchMe } from './store/slices/authSlice';
 import Navbar from './components/Navbar';
 import CartSidebar from './components/CartSidebar';
 import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute';
+import SplashScreen from './components/SplashScreen';
 
 import MenuPage from './pages/MenuPage';
 import LoginPage from './pages/LoginPage';
@@ -38,6 +39,7 @@ function PublicLayout({ children }) {
 export default function App() {
   const dispatch = useDispatch();
   const { isInitialized } = useSelector((s) => s.auth);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem('isLoggedIn') === 'true') {
@@ -47,13 +49,19 @@ export default function App() {
     }
   }, [dispatch]);
 
-  if (!isInitialized) {
+  if (!isInitialized || showSplash) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-surface">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-14 h-14 border-4 border-brand-500 border-t-transparent rounded-full animate-spin" />
-          <p className="text-gray-400 text-sm font-medium">Loading PizzaRush…</p>
-        </div>
+      <div className="min-h-screen bg-surface">
+        {showSplash ? (
+          <SplashScreen onComplete={() => setShowSplash(false)} />
+        ) : (
+          <div className="min-h-screen flex items-center justify-center bg-surface">
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-14 h-14 border-4 border-brand-500 border-t-transparent rounded-full animate-spin" />
+              <p className="text-gray-400 text-sm font-medium">Loading PizzaRush…</p>
+            </div>
+          </div>
+        )}
       </div>
     );
   }

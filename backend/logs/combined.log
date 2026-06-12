@@ -936,3 +936,19 @@
 [2026-06-12 16:09:54] info: 🚀 Server running on port 5000 in development mode
 [2026-06-12 16:09:54] info: 📡 Socket.io ready for real-time connections
 [2026-06-12 16:09:55] info: ✅ All inventory levels are healthy
+[2026-06-12 16:37:35] info: ✅ Socket.io initialized
+[2026-06-12 16:37:35] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 16:37:40] info: 🕐 Running low stock check...
+[2026-06-12 16:37:46] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 16:37:46] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 16:37:46] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 16:37:47] info: ✅ All inventory levels are healthy
+[2026-06-12 16:50:39] info: ✅ Socket.io initialized
+[2026-06-12 16:50:39] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 16:50:44] info: 🕐 Running low stock check...
+[2026-06-12 16:50:54] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 16:50:54] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 16:50:54] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 16:50:54] info: ✅ All inventory levels are healthy
+[2026-06-12 17:00:00] info: 🕐 Running low stock check...
+[2026-06-12 17:00:01] info: ✅ All inventory levels are healthy
