@@ -176,7 +176,7 @@ const logout = async (req, res, next) => {
     }
   }
 
-  res.clearCookie('refreshToken', { path: '/', httpOnly: true });
+  res.clearCookie('refreshToken', { path: '/', httpOnly: true, secure: true, sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax' });
   return ApiResponse.success(res, {}, 'Logged out successfully');
 };
 
@@ -184,7 +184,7 @@ const logoutAll = async (req, res, next) => {
   const user = await User.findById(req.user._id).select('+refreshTokens');
   user.refreshTokens = [];
   await user.save({ validateBeforeSave: false });
-  res.clearCookie('refreshToken', { path: '/', httpOnly: true });
+  res.clearCookie('refreshToken', { path: '/', httpOnly: true, secure: true, sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax' });
   return ApiResponse.success(res, {}, 'Logged out from all devices');
 };
 

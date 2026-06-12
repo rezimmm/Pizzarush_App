@@ -37,8 +37,8 @@ const hashToken = (token) => {
 
 const getRefreshTokenCookieOptions = () => ({
   httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
-  sameSite: process.env.NODE_ENV === 'production' ? 'strict' : 'lax',
+  secure: true,                  // always secure — required for SameSite=None
+  sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // 'none' required for cross-origin (GH Pages → Render)
   maxAge: 7 * 24 * 60 * 60 * 1000,
   path: '/',
 });
