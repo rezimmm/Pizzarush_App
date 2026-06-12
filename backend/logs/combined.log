@@ -1,0 +1,896 @@
+[2026-06-10 15:15:10] info: ✅ Socket.io initialized
+[2026-06-10 15:15:10] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-10 15:15:10] info: ✅ MongoDB Connected: localhost
+[2026-06-10 15:15:10] info: 🚀 Server running on port 5000 in development mode
+[2026-06-10 15:15:10] info: 📡 Socket.io ready for real-time connections
+[2026-06-10 15:15:15] info: 🕐 Running low stock check...
+[2026-06-10 15:15:15] info: ✅ All inventory levels are healthy
+[2026-06-10 15:15:43] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:43] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:44] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:15:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:44] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:15:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:45] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:15:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:45] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:15:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:45] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:15:46] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:46] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:15:46] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:15:46] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:17:20] info: ✅ Socket.io initialized
+[2026-06-10 15:17:21] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-10 15:17:21] info: ✅ MongoDB Connected: localhost
+[2026-06-10 15:17:21] info: 🚀 Server running on port 5000 in development mode
+[2026-06-10 15:17:21] info: 📡 Socket.io ready for real-time connections
+[2026-06-10 15:17:26] info: 🕐 Running low stock check...
+[2026-06-10 15:17:26] info: ✅ All inventory levels are healthy
+[2026-06-10 15:18:27] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:27] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:27] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:18:27] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:27] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:27] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:18:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:28] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:18:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:28] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:18:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:29] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:18:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:29] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:18:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:18:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:25] info: ✅ Socket.io initialized
+[2026-06-10 15:19:25] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-10 15:19:25] info: ✅ MongoDB Connected: localhost
+[2026-06-10 15:19:25] info: 🚀 Server running on port 5000 in development mode
+[2026-06-10 15:19:25] info: 📡 Socket.io ready for real-time connections
+[2026-06-10 15:19:30] info: 🕐 Running low stock check...
+[2026-06-10 15:19:30] info: ✅ All inventory levels are healthy
+[2026-06-10 15:19:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:44] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:44] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:45] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:45] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:46] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:46] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:46] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:46] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:46] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:46] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:47] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:47] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:47] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:47] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:47] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:47] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:48] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:48] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:48] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:48] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:48] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:48] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:49] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:49] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:49] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:50] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:50] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:50] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:51] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:51] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:51] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:52] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:52] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:52] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:52] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:52] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:52] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:53] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:53] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:53] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:54] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:54] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:54] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:55] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:55] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:55] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:55] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:55] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:55] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:56] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:56] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:56] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:56] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:56] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:56] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:57] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:57] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:57] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:57] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:57] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:57] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:58] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:58] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:58] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:58] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:58] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:58] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:59] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:59] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:59] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:19:59] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:59] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:19:59] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:00] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:00] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:00] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:01] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:01] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:01] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:01] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:01] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:01] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:02] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:02] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:02] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:02] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:02] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:02] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:03] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:03] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:03] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:03] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:03] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:03] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:04] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:04] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:05] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:05] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:05] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:05] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:05] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:05] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:05] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:06] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:06] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:06] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:06] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:06] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:06] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:07] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:07] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:07] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:07] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:07] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:07] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:08] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:08] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:08] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:08] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:08] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:08] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:09] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:09] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:09] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:09] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:09] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:09] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:10] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:10] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:10] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:10] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:10] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:10] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:11] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:11] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:11] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:12] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:12] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:12] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:12] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:12] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:12] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:13] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:13] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:13] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:14] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:14] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:14] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:15] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:15] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:15] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:15] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:15] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:16] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:16] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:16] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:17] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:17] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:17] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:18] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:18] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:18] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:18] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:20] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:20] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:20] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:21] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:21] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:21] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:22] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:22] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:22] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:23] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:23] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:23] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:24] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:24] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:24] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:25] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:25] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:25] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:26] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:26] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:26] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:26] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:26] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:26] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:27] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:27] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:27] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:28] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:29] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:29] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:30] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:30] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:30] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:31] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:31] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:31] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:32] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:32] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:32] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:33] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:33] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:34] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:34] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:34] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:35] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:35] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:35] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:36] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:36] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:36] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:37] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:37] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:37] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:38] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:38] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:38] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:39] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:39] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:39] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:40] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:40] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:40] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:41] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:41] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:41] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:42] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:42] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:42] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:43] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:43] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:43] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:44] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:44] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:45] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:46] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:47] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:47] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:47] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:48] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:48] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:48] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:49] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:49] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:49] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:50] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:50] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:50] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:51] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:51] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:51] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:51] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:51] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:51] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:52] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:52] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:52] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:53] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:53] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:53] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:54] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:54] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:54] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:55] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:55] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:55] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:56] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:56] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:56] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:57] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:57] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:57] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:58] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:58] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:58] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:20:59] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:59] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:20:59] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:00] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:00] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:01] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:01] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:01] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:02] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:02] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:02] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:03] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:03] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:03] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:04] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:05] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:05] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:05] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:06] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:06] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:06] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:08] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:08] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:08] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:09] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:09] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:09] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:10] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:10] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:10] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:11] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:11] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:12] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:12] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:12] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:14] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:14] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:14] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:21:31] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:31] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:21:31] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:23:16] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:23:16] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:23:16] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-10 15:24:48] info: ✅ New user registered: rezimtitoria04@gmail.com
+[2026-06-10 15:24:50] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-10 15:24:50] info:    User: x6z3aeodrigkogx4@ethereal.email | Pass: kCWXTv7HmPkYRwhSgD
+[2026-06-10 15:24:54] info: 📧 Email sent: <a709326d-21ab-584f-5059-5a7697d5b69f@pizzahub.com>
+[2026-06-10 15:24:54] info:    Preview URL: https://ethereal.email/message/aik0a7hlkJAAPeKYaik0cItyfEwQDscUAAAAAXH6ywi-NGyp-5GUW13oC4o
+[2026-06-10 15:24:59] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-10 15:25:15] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:25:15] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:25:33] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:25:33] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:25:39] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:25:39] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:26:03] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:26:03] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:27:04] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:27:04] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:27:39] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:27:39] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:27:40] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:27:40] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:27:47] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:27:47] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:28:33] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:28:33] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:29:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:29:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:29:38] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:29:38] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:29:40] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:29:40] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:29:43] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:29:43] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:29:49] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:29:49] error: CastError: Cast to ObjectId failed for value "my" (type string) at path "_id" for model "Order"
+    at SchemaObjectId.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1718:17)
+    at cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getOrderById (D:\Pizza_Delivery_App\backend\controllers\orderController.js:166:17)
+[2026-06-10 15:30:42] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:30:42] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:31:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:31:04] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:36:37] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:36:37] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:37:32] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:37:32] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:41:28] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-10 15:42:05] warn: [POST] /api/cart/add - 400: Invalid item type
+[2026-06-10 15:46:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-10 15:46:33] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-12 14:21:32] info: ✅ Socket.io initialized
+[2026-06-12 14:21:33] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 14:21:33] info: ✅ MongoDB Connected: localhost
+[2026-06-12 14:21:33] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 14:21:33] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 14:21:38] info: 🕐 Running low stock check...
+[2026-06-12 14:21:38] info: ✅ All inventory levels are healthy
+[2026-06-12 14:23:42] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:23:42] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-12 14:23:51] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:23:51] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-12 14:23:59] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:23:59] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-12 14:24:04] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:24:04] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-12 14:24:17] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:24:17] warn: [POST] /api/auth/refresh - 401: Refresh token not provided.
+[2026-06-12 14:30:59] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:31:31] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:32:08] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:32:37] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:32:57] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:33:24] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:34:36] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:36:46] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:37:01] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:37:09] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:37:14] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 14:38:00] info: 📦 Order created: PZH-20260612-9162 for user: rezimtitoria04@gmail.com
+[2026-06-12 14:38:02] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-12 14:38:02] info:    User: gmlczgufnqgtnjvh@ethereal.email | Pass: 2Pw234ZtqTfXaSQdCP
+[2026-06-12 14:38:02] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-12 14:38:02] info:    User: c3akbsos3lwmwzya@ethereal.email | Pass: 5zEHZFQUHSK3kQEhuC
+[2026-06-12 14:38:08] info: 📧 Email sent: <f386a722-17b2-9b31-7a34-2157f87abea8@pizzahub.com>
+[2026-06-12 14:38:08] info:    Preview URL: https://ethereal.email/message/aivMdEe-jEewJOQ1aivMe.sdSb1Tguj5AAAAARE4Cr5QCQClMm1Fy8eY7NM
+[2026-06-12 14:38:08] info: 📧 Email sent: <4fce85bc-d7e5-9b83-54f2-5f827a427756@pizzahub.com>
+[2026-06-12 14:38:08] info:    Preview URL: https://ethereal.email/message/aivMdEe-jEewJOQ-aivMe4tyfEwQGbqMAAAAAeEGl0Q0NDFLtXpYeveGc5I
+[2026-06-12 14:38:16] info: 📦 Order created: PZH-20260612-3480 for user: rezimtitoria04@gmail.com
+[2026-06-12 14:38:22] info: 📧 Email sent: <fbb034d2-5051-738c-6ecf-f6eda217165a@pizzahub.com>
+[2026-06-12 14:38:22] info:    Preview URL: https://ethereal.email/message/aivMdEe-jEewJOQ-aivMiPsdSb1TgumYAAAAAu-uMYzb.VGCELGZiJn6d2I
+[2026-06-12 14:38:22] info: 📧 Email sent: <28f721e0-1ce3-5abc-8546-14b86a25ae9b@pizzahub.com>
+[2026-06-12 14:38:22] info:    Preview URL: https://ethereal.email/message/aivMdEe-jEewJOQ-aivMiEaRd.PI0QsFAAAAA5ysjlLowJfTTgKjVqVxY5o
+[2026-06-12 14:39:46] info: 🔌 Socket connected: fDuOyWFkUol_JWolAAAE | User: 6a293467131e9dc6b24ae24c
+[2026-06-12 14:39:46] info: 📦 User tracking order: 6a2bcc80486ee982b56b53f0
+[2026-06-12 14:41:26] info: 🔌 Socket disconnected: fDuOyWFkUol_JWolAAAE | Reason: transport close
+[2026-06-12 14:41:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-12 14:41:28] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-12 14:41:28] info: 🔌 Socket connected: endeX45tlyeHJYOgAAAH | User: 6a293467131e9dc6b24ae24c
+[2026-06-12 14:41:29] info: 📦 User tracking order: 6a2bcc80486ee982b56b53f0
+[2026-06-12 14:52:18] info: ✅ Socket.io initialized
+[2026-06-12 14:52:18] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 14:52:23] info: 🕐 Running low stock check...
+[2026-06-12 14:52:29] error: ❌ MongoDB Connection Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.zzdnx4o.mongodb.net
+[2026-06-12 14:52:57] info: ✅ Socket.io initialized
+[2026-06-12 14:52:57] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 14:53:00] info: ✅ Socket.io initialized
+[2026-06-12 14:53:00] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 14:53:05] info: 🕐 Running low stock check...
+[2026-06-12 14:53:15] error: MongooseError: Operation `inventories.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[2026-06-12 14:53:26] error: ❌ MongoDB Connection Error: read ECONNRESET
+[2026-06-12 14:55:13] info: ✅ Socket.io initialized
+[2026-06-12 14:55:13] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 14:55:17] error: ❌ MongoDB Connection Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.zzdnx4o.mongodb.net
+[2026-06-12 14:56:14] info: ✅ Socket.io initialized
+[2026-06-12 14:56:14] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 14:56:16] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 14:56:16] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 14:56:16] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 14:56:19] info: 🕐 Running low stock check...
+[2026-06-12 14:56:28] info: ✅ All inventory levels are healthy
+[2026-06-12 14:56:53] info: ✅ Socket.io initialized
+[2026-06-12 14:56:53] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 14:56:57] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 14:56:57] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 14:56:57] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 14:56:58] info: 🕐 Running low stock check...
+[2026-06-12 14:56:58] info: ✅ All inventory levels are healthy
+[2026-06-12 14:59:45] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:59:50] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 14:59:56] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 15:00:00] info: 🕐 Running low stock check...
+[2026-06-12 15:00:01] info: ✅ All inventory levels are healthy
+[2026-06-12 15:00:22] info: ✅ New user registered: rezimtitoria04@gmail.com
+[2026-06-12 15:00:24] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-12 15:00:24] info:    User: gu7qiba4moumvdof@ethereal.email | Pass: FxJNJ5mB9zBnajZmPx
+[2026-06-12 15:00:29] info: 📧 Email sent: <07fc9f43-8c42-a18d-f836-076f07b6e311@pizzahub.com>
+[2026-06-12 15:00:29] info:    Preview URL: https://ethereal.email/message/aivRske-jEewJaBhaivRt4tyfEwQGd5qAAAAAQLuj3WN2qXPH02DuwMdTj0
+[2026-06-12 15:00:36] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 15:01:19] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 15:02:06] info: ✅ Socket.io initialized
+[2026-06-12 15:02:06] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 15:02:11] info: 🕐 Running low stock check...
+[2026-06-12 15:02:12] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 15:02:12] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 15:02:12] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 15:02:13] info: ✅ All inventory levels are healthy
+[2026-06-12 15:05:11] info: ✅ User logged in: admin@pizzarush.com | Role: admin
+[2026-06-12 15:05:18] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:05:18] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:05:18] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:05:18] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:05:40] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=30
+[2026-06-12 15:05:40] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=30
+[2026-06-12 15:05:53] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:05:53] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:05:53] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:05:53] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:06:17] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=30
+[2026-06-12 15:06:18] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=30
+[2026-06-12 15:06:19] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:06:19] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:06:19] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:06:19] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:06:23] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=30
+[2026-06-12 15:06:24] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=30
+[2026-06-12 15:06:25] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:06:25] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:06:25] warn: [GET] /api/admin/orders - 404: Route not found: GET /api/admin/orders?limit=100
+[2026-06-12 15:06:25] warn: [GET] /api/admin/analytics - 404: Route not found: GET /api/admin/analytics
+[2026-06-12 15:07:53] error: ValidationError: Pizza validation failed: category: `Veg` is not a valid enum value for path `category`.
+    at Document.invalidate (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\document.js:3381:32)
+    at D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\document.js:3142:17
+    at D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\schemaType.js:1443:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2026-06-12 15:09:35] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-12 15:09:35] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-12 15:12:14] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-12 15:12:14] warn: [GET] /api/auth/me - 401: Access denied. No token provided.
+[2026-06-12 15:15:53] info: ✅ User logged in: admin@pizzarush.com | Role: admin
+[2026-06-12 15:16:42] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 15:17:44] info: 📦 Order created: PZH-20260612-3324 for user: rezimtitoria04@gmail.com
+[2026-06-12 15:17:45] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-12 15:17:45] info:    User: lwzwyelei4xvqn4w@ethereal.email | Pass: dkpjHsyyeEtazUQwXB
+[2026-06-12 15:17:45] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-12 15:17:45] info:    User: h6l3kwjwbjr2iuhr@ethereal.email | Pass: SAB7EfFNptSsyCRJC3
+[2026-06-12 15:17:50] info: 📧 Email sent: <58efe08d-c457-5fb9-8e1a-a90d72de8435@pizzahub.com>
+[2026-06-12 15:17:50] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhnUaivVyPsdSb1TgxVOAAAAATwWOat8nhugorE.eKDwqNY
+[2026-06-12 15:17:50] info: 📧 Email sent: <1e2cbed5-6131-666f-3563-47cac565aa8d@pizzahub.com>
+[2026-06-12 15:17:50] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhndaivVyItyfEwQGec.AAAAAWhWS9BTITDbKvwKCsQFVfc
+[2026-06-12 15:17:57] info: 📦 Order created: PZH-20260612-2520 for user: rezimtitoria04@gmail.com
+[2026-06-12 15:18:03] info: 📧 Email sent: <173501cd-19a7-deb6-8d05-4149a575a219@pizzahub.com>
+[2026-06-12 15:18:03] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhndaivV1otyfEwQGedIAAAAAlPbzlZbXn-KY1xpqXrRF60
+[2026-06-12 15:18:03] info: 📧 Email sent: <63e88c59-f4d3-73c5-5bf6-1113c32af32e@pizzahub.com>
+[2026-06-12 15:18:03] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhndaivV1uh.E5oJ96KTAAAAAwm3GTuyxNYj9ZLrl.0Ocsc
+[2026-06-12 15:21:57] warn: ⚠️  MongoDB disconnected. Attempting to reconnect...
+[2026-06-12 15:21:57] warn: [POST] /api/auth/refresh - 401: Session invalid. Please login again.
+[2026-06-12 15:22:00] info: ✅ MongoDB reconnected
+[2026-06-12 15:22:01] warn: [POST] /api/auth/refresh - 401: Session invalid. Please login again.
+[2026-06-12 15:22:43] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 15:23:05] warn: [POST] /api/auth/login - 401: Invalid email or password.
+[2026-06-12 15:23:15] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 15:23:44] info: 📦 Order created: PZH-20260612-2683 for user: rezimtitoria04@gmail.com
+[2026-06-12 15:23:45] info: 💳 Razorpay order created: order_T0g3hS0djuy9Qr
+[2026-06-12 15:23:50] info: 📧 Email sent: <0651bbf1-db5d-c09f-b16f-c24cd8c2ef61@pizzahub.com>
+[2026-06-12 15:23:50] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhndaivXMfsdSb1TgxaGAAAABP07BwtqKALcNCM9FjLBTNY
+[2026-06-12 15:23:50] info: 📧 Email sent: <81db2261-cc86-fdd9-a6f6-4ab38d954ded@pizzahub.com>
+[2026-06-12 15:23:50] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhndaivXMYtyfEwQGehtAAAABRJltU1t04H3lV3bHpNyEcI
+[2026-06-12 15:25:19] error: VersionError: No matching document found for id "6a2bd1ae91579cbacc68ce00" version 6 modifiedPaths "refreshTokens, lastLogin"
+    at generateVersionError (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\model.js:566:10)
+    at model.save (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\model.js:624:28)
+    at sendTokens (D:\Pizza_Delivery_App\backend\controllers\authController.js:37:14)
+    at refreshAccessToken (D:\Pizza_Delivery_App\backend\controllers\authController.js:177:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2026-06-12 15:27:59] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 15:28:13] info: 📦 Order created: PZH-20260612-1861 for user: rezimtitoria04@gmail.com
+[2026-06-12 15:28:13] info: 💳 Razorpay order created: order_T0g8QLawLeGpxU
+[2026-06-12 15:28:19] info: 📧 Email sent: <1ebd90a2-8abc-269a-b942-ebab1bd4d1f8@pizzahub.com>
+[2026-06-12 15:28:19] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhndaivYPeh.E5oJ96SVAAAABnNv2BbtcppcgLi-fIX0DSk
+[2026-06-12 15:28:19] info: 📧 Email sent: <e6a6492f-feeb-31e2-fa1d-205096d2f146@pizzahub.com>
+[2026-06-12 15:28:19] info:    Preview URL: https://ethereal.email/message/aivVxEe-jEewJhndaivYPYtyfEwQGelIAAAABwIs0giSBSTRJ.x6RyeDXCc
+[2026-06-12 15:28:49] info: 💳 Payment verified: pay_T0g8eyehqeNTSU for order PZH-20260612-1861
+[2026-06-12 15:28:49] info: 🔌 Socket connected: Uf1KN-edzP17wDXjAAAC | User: 6a2bd1ae91579cbacc68ce00
+[2026-06-12 15:28:49] info: 📦 User tracking order: 6a2bd834b46c697b55e58a96
+[2026-06-12 15:29:13] info: 🔌 Socket disconnected: Uf1KN-edzP17wDXjAAAC | Reason: client namespace disconnect
+[2026-06-12 15:32:13] info: ✅ Socket.io initialized
+[2026-06-12 15:32:13] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 15:32:18] info: 🕐 Running low stock check...
+[2026-06-12 15:32:25] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 15:32:25] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 15:32:25] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 15:32:32] info: ✅ All inventory levels are healthy
+[2026-06-12 15:36:22] info: ✅ Socket.io initialized
+[2026-06-12 15:36:22] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 15:36:27] info: 🕐 Running low stock check...
+[2026-06-12 15:36:37] error: MongooseError: Operation `inventories.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[2026-06-12 15:36:52] error: ❌ MongoDB Connection Error: connection <monitor> to 159.41.230.198:27017 closed
+[2026-06-12 15:40:10] info: ✅ Socket.io initialized
+[2026-06-12 15:40:10] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 15:40:15] info: 🕐 Running low stock check...
+[2026-06-12 15:40:25] error: MongooseError: Operation `inventories.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Pizza_Delivery_App\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[2026-06-12 15:40:26] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 15:40:26] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 15:40:26] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 15:41:14] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 15:41:14] error: ReferenceError: hashedRefreshToken is not defined
+    at sendTokens (D:\Pizza_Delivery_App\backend\controllers\authController.js:33:19)
+    at login (D:\Pizza_Delivery_App\backend\controllers\authController.js:146:10)
+[2026-06-12 15:41:21] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 15:41:21] error: ReferenceError: hashedRefreshToken is not defined
+    at sendTokens (D:\Pizza_Delivery_App\backend\controllers\authController.js:33:19)
+    at login (D:\Pizza_Delivery_App\backend\controllers\authController.js:146:10)

@@ -1,0 +1,142 @@
+/**
+ * app.js — Express application setup
+ * Configures all middleware, routes, and error handlers.
+ */
+
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+const rateLimit = require('express-rate-limit');
+const mongoSanitize = require('express-mongo-sanitize');
+const xssClean = require('xss-clean');
+const hpp = require('hpp');
+const cookieParser = require('cookie-parser');
+const compression = require('compression');
+const path = require('path');
+
+const authRoutes = require('./routes/authRoutes');
+const pizzaRoutes = require('./routes/pizzaRoutes');
+const inventoryRoutes = require('./routes/inventoryRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
+const adminRoutes = require('./routes/adminRoutes');
+const errorHandler = require('./middleware/errorMiddleware');
+const notFound = require('./middleware/notFound');
+
+const app = express();
+
+// ─── CORS ─────────────────────────────────────────────────────────────────────
+app.use(cors({
+  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+
+// ─── Security Middleware ──────────────────────────────────────────────────────
+app.use(helmet({
+  // Allow Razorpay checkout iframes and scripts
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",     // needed by Razorpay checkout
+        'https://checkout.razorpay.com',
+        'https://checkout-static-next.razorpay.com',
+        'https://api.razorpay.com',
+        'https://browser.sentry-cdn.com',
+        'https://api.sardine.ai',
+      ],
+      frameSrc: [
+        "'self'",
+        'https://api.razorpay.com',
+        'https://checkout-static-next.razorpay.com',
+        'https://*.razorpay.com',
+      ],
+      connectSrc: [
+        "'self'",
+        'https://*.razorpay.com',
+        'https://api.sardine.ai',
+        'http://localhost:5000',
+        'ws://localhost:5000',
+      ],
+      imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+    },
+  },
+  // Allow sensor APIs required by Razorpay's fraud-detection (sardine.ai)
+  permissionsPolicy: {
+    features: {
+      accelerometer: ['*'],
+      gyroscope: ['*'],
+      magnetometer: ['*'],
+      payment: ['*'],
+    },
+  },
+  // Expose safe headers for Razorpay responses
+  crossOriginEmbedderPolicy: false,   // allow Razorpay iframe
+  crossOriginResourcePolicy: false,
+  crossOriginOpenerPolicy: false,     // allow Razorpay popup to communicate with main window
+}));
+app.use(mongoSanitize());                   // Sanitize against NoSQL query injection
+app.use(xssClean());                        // Sanitize against XSS attacks
+app.use(hpp());                             // Prevent HTTP Parameter Pollution
+app.use(compression());                     // Compress responses
+
+
+// ─── Rate Limiting ────────────────────────────────────────────────────────────
+const globalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 500,
+  message: { success: false, message: 'Too many requests, please try again later.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: process.env.NODE_ENV === 'development' ? 1000 : 20, // Increased for dev
+  message: { success: false, message: 'Too many auth attempts, please try again later.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use('/api', globalLimiter);
+app.use('/api/auth', authLimiter);
+
+// ─── Body Parsing & Cookies ───────────────────────────────────────────────────
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+app.use(cookieParser(process.env.COOKIE_SECRET));
+
+// ─── Request Logger (Dev only) ────────────────────────────────────────────────
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+
+// ─── Static Files ─────────────────────────────────────────────────────────────
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// ─── Health Check ─────────────────────────────────────────────────────────────
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// ─── Routes ───────────────────────────────────────────────────────────────────
+app.use('/api/auth', authRoutes);
+app.use('/api/pizzas', pizzaRoutes);
+app.use('/api/inventory', inventoryRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/payments', paymentRoutes);
+app.use('/api/admin', adminRoutes);
+
+// ─── 404 & Error Handlers ─────────────────────────────────────────────────────
+app.use(notFound);
+app.use(errorHandler);
+
+module.exports = app;
