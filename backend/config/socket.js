@@ -1,8 +1,3 @@
-/**
- * config/socket.js — Socket.io initialization and event handling
- * Manages real-time order status updates pushed from admin to customers.
- */
-
 const { Server } = require('socket.io');
 const jwt = require('jsonwebtoken');
 const logger = require('../utils/logger');
@@ -19,7 +14,6 @@ const initializeSocket = (server) => {
     pingTimeout: 60000,
   });
 
-  // ─── Authentication Middleware for Sockets ─────────────────────────────────
   io.use((socket, next) => {
     const token = socket.handshake.auth.token;
     if (!token) {
@@ -36,7 +30,6 @@ const initializeSocket = (server) => {
     }
   });
 
-  // ─── Connection Handler ────────────────────────────────────────────────────
   io.on('connection', (socket) => {
     logger.info(`🔌 Socket connected: ${socket.id} | User: ${socket.userId}`);
 

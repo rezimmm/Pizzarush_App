@@ -3,8 +3,6 @@ import axios from 'axios';
 import api from '../../api/axiosInstance';
 import toast from 'react-hot-toast';
 
-// ─── Async Thunks ─────────────────────────────────────────────────────────────
-
 export const registerUser = createAsyncThunk(
   'auth/register',
   async (data, { rejectWithValue }) => {
@@ -76,8 +74,6 @@ export const updateProfile = createAsyncThunk(
     }
   }
 );
-
-// ─── Slice ────────────────────────────────────────────────────────────────────
 
 const authSlice = createSlice({
   name: 'auth',

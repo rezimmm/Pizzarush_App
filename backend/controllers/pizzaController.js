@@ -1,11 +1,6 @@
-/**
- * controllers/pizzaController.js — Pizza Catalog CRUD
- */
-
 const Pizza = require('../models/Pizza');
 const { ApiResponse, AppError } = require('../utils/apiResponse');
 
-// ─── GET /api/pizzas ──────────────────────────────────────────────────────────
 const getAllPizzas = async (req, res) => {
   const { search, category, sort, available, page = 1, limit = 12 } = req.query;
 
@@ -49,26 +44,22 @@ const getAllPizzas = async (req, res) => {
   );
 };
 
-// ─── GET /api/pizzas/featured ─────────────────────────────────────────────────
 const getFeaturedPizzas = async (req, res) => {
   const pizzas = await Pizza.find({ isFeatured: true, isAvailable: true }).limit(6);
   return ApiResponse.success(res, { pizzas });
 };
 
-// ─── GET /api/pizzas/:id ──────────────────────────────────────────────────────
 const getPizzaById = async (req, res, next) => {
   const pizza = await Pizza.findById(req.params.id);
   if (!pizza) return next(new AppError('Pizza not found', 404));
   return ApiResponse.success(res, { pizza });
 };
 
-// ─── POST /api/pizzas — Create pizza (admin) ──────────────────────────────────
 const createPizza = async (req, res) => {
   const pizza = await Pizza.create(req.body);
   return ApiResponse.created(res, { pizza }, 'Pizza created');
 };
 
-// ─── PUT /api/pizzas/:id — Update pizza (admin) ───────────────────────────────
 const updatePizza = async (req, res, next) => {
   const pizza = await Pizza.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
@@ -78,7 +69,6 @@ const updatePizza = async (req, res, next) => {
   return ApiResponse.success(res, { pizza }, 'Pizza updated');
 };
 
-// ─── DELETE /api/pizzas/:id — Delete pizza (admin) ───────────────────────────
 const deletePizza = async (req, res, next) => {
   const pizza = await Pizza.findByIdAndDelete(req.params.id);
   if (!pizza) return next(new AppError('Pizza not found', 404));

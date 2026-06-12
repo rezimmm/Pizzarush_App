@@ -1,8 +1,3 @@
-/**
- * utils/seeder.js — Database seeder for initial data
- * Run with: npm run seed
- */
-
 require('dotenv').config();
 const mongoose = require('mongoose');
 const User = require('../models/User');

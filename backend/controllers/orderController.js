@@ -1,8 +1,3 @@
-/**
- * controllers/orderController.js — Order Management
- * Creates orders, manages status updates, deducts inventory, sends notifications.
- */
-
 const Order = require('../models/Order');
 const Cart = require('../models/Cart');
 const Inventory = require('../models/Inventory');
@@ -18,7 +13,6 @@ const logger = require('../utils/logger');
 const DELIVERY_FEE = 40;
 const TAX_RATE = 0.05; // 5%
 
-// ─── Helper: Deduct inventory for order items ─────────────────────────────────
 const deductInventory = async (items, orderId, adminUserId) => {
   for (const item of items) {
     if (item.itemType === 'custom' && item.customDetails) {
@@ -49,7 +43,6 @@ const deductInventory = async (items, orderId, adminUserId) => {
   }
 };
 
-// ─── POST /api/orders — Create order from cart ───────────────────────────────
 const createOrder = async (req, res, next) => {
   const { deliveryAddress, paymentMethod = 'razorpay', notes } = req.body;
 
@@ -136,7 +129,6 @@ const createOrder = async (req, res, next) => {
   return ApiResponse.created(res, { order }, 'Order created');
 };
 
-// ─── GET /api/orders — Get user's orders ─────────────────────────────────────
 const getMyOrders = async (req, res) => {
   const { page = 1, limit = 10 } = req.query;
   const skip = (Number(page) - 1) * Number(limit);
@@ -154,7 +146,6 @@ const getMyOrders = async (req, res) => {
   });
 };
 
-// ─── GET /api/orders/:id — Get order by ID ───────────────────────────────────
 const getOrderById = async (req, res, next) => {
   const query = { _id: req.params.id };
 
@@ -169,7 +160,6 @@ const getOrderById = async (req, res, next) => {
   return ApiResponse.success(res, { order });
 };
 
-// ─── PATCH /api/orders/:id/status — Update order status (admin) ──────────────
 const updateOrderStatus = async (req, res, next) => {
   const { status, note } = req.body;
 
@@ -218,7 +208,6 @@ const updateOrderStatus = async (req, res, next) => {
   return ApiResponse.success(res, { order }, 'Order status updated');
 };
 
-// ─── GET /api/orders/admin/all — Get all orders (admin) ─────────────────────
 const getAllOrders = async (req, res) => {
   const { page = 1, limit = 20, status, search } = req.query;
   const skip = (Number(page) - 1) * Number(limit);

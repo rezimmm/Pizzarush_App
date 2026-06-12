@@ -1,14 +1,8 @@
-/**
- * controllers/cartController.js — Cart Management
- * Handles add/remove/update/clear cart items. Cart persists per user in DB.
- */
-
 const Cart = require('../models/Cart');
 const Pizza = require('../models/Pizza');
 const Inventory = require('../models/Inventory');
 const { ApiResponse, AppError } = require('../utils/apiResponse');
 
-// ─── Helper: Calculate custom pizza price ────────────────────────────────────
 const calculateCustomPrice = (baseDetails, sauceDetails, cheeseDetails, veggiesDetails, meatsDetails) => {
   const BASE_PRICE = 149; // Base pizza price
   const basePrice = baseDetails?.price || 0;
@@ -19,7 +13,6 @@ const calculateCustomPrice = (baseDetails, sauceDetails, cheeseDetails, veggiesD
   return BASE_PRICE + basePrice + saucePrice + cheesePrice + veggiesPrice + meatsPrice;
 };
 
-// ─── GET /api/cart ────────────────────────────────────────────────────────────
 const getCart = async (req, res) => {
   const cart = await Cart.findOne({ user: req.user._id })
     .populate('items.pizza', 'name price image isAvailable')
@@ -36,7 +29,6 @@ const getCart = async (req, res) => {
   return ApiResponse.success(res, { cart });
 };
 
-// ─── POST /api/cart/add — Add item to cart ────────────────────────────────────
 const addToCart = async (req, res, next) => {
   const { itemType, pizzaId, customPizza, quantity = 1 } = req.body;
 
@@ -118,7 +110,6 @@ const addToCart = async (req, res, next) => {
   return ApiResponse.success(res, { cart }, 'Item added to cart');
 };
 
-// ─── PUT /api/cart/item/:itemId — Update item quantity ────────────────────────
 const updateCartItem = async (req, res, next) => {
   const { quantity } = req.body;
 
@@ -139,7 +130,6 @@ const updateCartItem = async (req, res, next) => {
   return ApiResponse.success(res, { cart }, 'Cart updated');
 };
 
-// ─── DELETE /api/cart/item/:itemId — Remove item from cart ───────────────────
 const removeFromCart = async (req, res, next) => {
   const cart = await Cart.findOne({ user: req.user._id });
   if (!cart) return next(new AppError('Cart not found', 404));
@@ -149,7 +139,6 @@ const removeFromCart = async (req, res, next) => {
   return ApiResponse.success(res, { cart }, 'Item removed from cart');
 };
 
-// ─── DELETE /api/cart — Clear cart ───────────────────────────────────────────
 const clearCart = async (req, res) => {
   const cart = await Cart.findOne({ user: req.user._id });
   if (cart) {

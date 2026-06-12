@@ -1,8 +1,3 @@
-/**
- * models/Pizza.js — Pizza catalog schema
- * Predefined pizzas available in the menu.
- */
-
 const mongoose = require('mongoose');
 
 const pizzaSchema = new mongoose.Schema(

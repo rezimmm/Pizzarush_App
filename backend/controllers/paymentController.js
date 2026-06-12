@@ -1,8 +1,3 @@
-/**
- * controllers/paymentController.js — Razorpay Payment Flow
- * createPaymentOrder → verifyPayment → webhook (optional)
- */
-
 const Order = require('../models/Order');
 const Payment = require('../models/Payment');
 const Cart = require('../models/Cart');
@@ -10,7 +5,6 @@ const { ApiResponse, AppError } = require('../utils/apiResponse');
 const { createRazorpayOrder, verifyPaymentSignature, fetchPaymentDetails } = require('../services/paymentService');
 const logger = require('../utils/logger');
 
-// ─── POST /api/payments/create-order ─────────────────────────────────────────
 // Creates a Razorpay order for a given app order
 const createPaymentOrder = async (req, res, next) => {
   const { orderId } = req.body; // Our internal order ID
@@ -62,7 +56,6 @@ const createPaymentOrder = async (req, res, next) => {
   }, 'Payment order created');
 };
 
-// ─── POST /api/payments/verify ────────────────────────────────────────────────
 // Verifies Razorpay payment signature and marks order as paid
 const verifyPayment = async (req, res, next) => {
   const { razorpayOrderId, razorpayPaymentId, razorpaySignature, orderId } = req.body;
@@ -130,7 +123,6 @@ const verifyPayment = async (req, res, next) => {
   }, 'Payment verified successfully. Order confirmed!');
 };
 
-// ─── POST /api/payments/failure — Log payment failure ────────────────────────
 const handlePaymentFailure = async (req, res) => {
   const { razorpayOrderId, errorCode, errorDescription } = req.body;
 
@@ -142,7 +134,6 @@ const handlePaymentFailure = async (req, res) => {
   return ApiResponse.success(res, {}, 'Payment failure logged');
 };
 
-// ─── GET /api/payments/order/:orderId — Get payment for an order ──────────────
 const getPaymentForOrder = async (req, res, next) => {
   const order = await Order.findOne({ _id: req.params.orderId, user: req.user._id });
   if (!order) return next(new AppError('Order not found', 404));

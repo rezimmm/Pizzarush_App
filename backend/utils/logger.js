@@ -1,7 +1,3 @@
-/**
- * utils/logger.js — Winston logger configuration
- */
-
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, printf, colorize, errors } = format;
 const path = require('path');

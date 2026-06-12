@@ -1,7 +1,3 @@
-/**
- * services/paymentService.js — Razorpay Payment Integration
- */
-
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
 const logger = require('../utils/logger');
@@ -11,12 +7,6 @@ const razorpay = new Razorpay({
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
-/**
- * Create a Razorpay order
- * @param {number} amount - Amount in INR (will be converted to paise)
- * @param {string} receipt - Unique receipt string (usually our orderId)
- * @param {object} notes - Additional metadata
- */
 const createRazorpayOrder = async (amount, receipt, notes = {}) => {
   try {
     const order = await razorpay.orders.create({
@@ -35,11 +25,6 @@ const createRazorpayOrder = async (amount, receipt, notes = {}) => {
   }
 };
 
-/**
- * Verify Razorpay payment signature (HMAC SHA256)
- * This is CRITICAL to prevent payment fraud.
- * @returns {boolean} true if signature is valid
- */
 const verifyPaymentSignature = (razorpayOrderId, razorpayPaymentId, signature) => {
   const body = `${razorpayOrderId}|${razorpayPaymentId}`;
   const expectedSignature = crypto
@@ -54,9 +39,6 @@ const verifyPaymentSignature = (razorpayOrderId, razorpayPaymentId, signature) =
   return isValid;
 };
 
-/**
- * Fetch payment details from Razorpay
- */
 const fetchPaymentDetails = async (paymentId) => {
   try {
     return await razorpay.payments.fetch(paymentId);

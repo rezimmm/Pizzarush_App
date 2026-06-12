@@ -1,11 +1,6 @@
-/**
- * controllers/inventoryController.js — Inventory CRUD for all categories
- */
-
 const Inventory = require('../models/Inventory');
 const { ApiResponse, AppError } = require('../utils/apiResponse');
 
-// ─── GET /api/inventory — Get all inventory (admin) or by category ──────────
 const getAllInventory = async (req, res) => {
   const { category, available } = req.query;
   const filter = {};
@@ -16,7 +11,6 @@ const getAllInventory = async (req, res) => {
   return ApiResponse.success(res, { inventory, count: inventory.length });
 };
 
-// ─── GET /api/inventory/available — Get available items grouped by category ──
 const getAvailableItems = async (req, res) => {
   const items = await Inventory.find({ isAvailable: true }).sort({ category: 1, itemName: 1 });
 
@@ -44,14 +38,12 @@ const getAvailableItems = async (req, res) => {
   return ApiResponse.success(res, { grouped });
 };
 
-// ─── GET /api/inventory/:id ──────────────────────────────────────────────────
 const getInventoryItem = async (req, res, next) => {
   const item = await Inventory.findById(req.params.id);
   if (!item) return next(new AppError('Inventory item not found', 404));
   return ApiResponse.success(res, { item });
 };
 
-// ─── POST /api/inventory — Create inventory item (admin) ─────────────────────
 const createInventoryItem = async (req, res) => {
   const { category, itemName, quantity, threshold, price, unit, imageUrl } = req.body;
 
@@ -74,7 +66,6 @@ const createInventoryItem = async (req, res) => {
   return ApiResponse.created(res, { item }, 'Inventory item created');
 };
 
-// ─── PUT /api/inventory/:id — Update inventory item (admin) ──────────────────
 const updateInventoryItem = async (req, res, next) => {
   const { category, itemName, quantity, threshold, price, unit, imageUrl } = req.body;
 
@@ -100,7 +91,6 @@ const updateInventoryItem = async (req, res, next) => {
   return ApiResponse.success(res, { item }, 'Inventory updated');
 };
 
-// ─── PATCH /api/inventory/:id/stock — Adjust stock ───────────────────────────
 const adjustStock = async (req, res, next) => {
   const { action, quantity, reason } = req.body; // action: 'add' | 'deduct' | 'adjust'
 
@@ -131,7 +121,6 @@ const adjustStock = async (req, res, next) => {
   return ApiResponse.success(res, { item }, 'Stock adjusted');
 };
 
-// ─── DELETE /api/inventory/:id — Delete inventory item (admin) ───────────────
 const deleteInventoryItem = async (req, res, next) => {
   const item = await Inventory.findByIdAndDelete(req.params.id);
   if (!item) return next(new AppError('Inventory item not found', 404));

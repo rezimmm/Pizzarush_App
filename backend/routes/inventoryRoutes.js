@@ -1,7 +1,3 @@
-/**
- * routes/inventoryRoutes.js
- */
-
 const router = require('express').Router();
 const { protect, restrictTo } = require('../middleware/authMiddleware');
 const {

@@ -1,8 +1,3 @@
-/**
- * middleware/validate.js — express-validator result checker
- * Call this after your validation chain in routes.
- */
-
 const { validationResult } = require('express-validator');
 const { ApiResponse } = require('../utils/apiResponse');
 

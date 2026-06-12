@@ -1,8 +1,3 @@
-/**
- * jobs/stockAlertJob.js — Cron job for low stock email alerts
- * Runs every hour and notifies admin if any inventory is below threshold.
- */
-
 const cron = require('node-cron');
 const Inventory = require('../models/Inventory');
 const { sendLowStockAlert } = require('../services/emailService');

@@ -1,8 +1,3 @@
-/**
- * controllers/authController.js — Full Authentication Flow
- * Handles: register, verify email, login, refresh token, logout, forgot/reset password.
- */
-
 const crypto = require('crypto');
 const User = require('../models/User');
 const { ApiResponse, AppError } = require('../utils/apiResponse');
@@ -19,7 +14,6 @@ const {
 } = require('../services/emailService');
 const logger = require('../utils/logger');
 
-// ─── Helper: Generate and send tokens ────────────────────────────────────────
 const sendTokens = async (res, user, statusCode = 200, message = 'Success') => {
   const accessToken = generateAccessToken({ id: user._id, role: user.role });
   const refreshToken = generateRefreshToken({ id: user._id, role: user.role });
@@ -55,7 +49,6 @@ const sendTokens = async (res, user, statusCode = 200, message = 'Success') => {
   return ApiResponse.success(res, { accessToken, user: userData }, message, statusCode);
 };
 
-// ─── @POST /api/auth/register ─────────────────────────────────────────────────
 const register = async (req, res, next) => {
   const { name, email, password } = req.body;
 
@@ -89,7 +82,6 @@ const register = async (req, res, next) => {
   );
 };
 
-// ─── @GET /api/auth/verify-email/:token ──────────────────────────────────────
 const verifyEmail = async (req, res, next) => {
   const hashedToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
 
@@ -111,7 +103,6 @@ const verifyEmail = async (req, res, next) => {
   return ApiResponse.success(res, {}, 'Email verified successfully! You can now log in.');
 };
 
-// ─── @POST /api/auth/resend-verification ─────────────────────────────────────
 const resendVerification = async (req, res, next) => {
   const { email } = req.body;
   const user = await User.findOne({ email }).select('+emailVerificationToken +emailVerificationExpires');
@@ -128,7 +119,6 @@ const resendVerification = async (req, res, next) => {
   return ApiResponse.success(res, {}, 'Verification email resent. Please check your inbox.');
 };
 
-// ─── @POST /api/auth/login ────────────────────────────────────────────────────
 const login = async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -147,7 +137,6 @@ const login = async (req, res, next) => {
   return sendTokens(res, user, 200, 'Login successful');
 };
 
-// ─── @POST /api/auth/refresh ──────────────────────────────────────────────────
 const refreshAccessToken = async (req, res, next) => {
   const incomingRefreshToken = req.cookies?.refreshToken || req.body?.refreshToken;
 
@@ -183,7 +172,6 @@ const refreshAccessToken = async (req, res, next) => {
   return sendTokens(res, user, 200, 'Token refreshed');
 };
 
-// ─── @POST /api/auth/logout ───────────────────────────────────────────────────
 const logout = async (req, res, next) => {
   const incomingRefreshToken = req.cookies?.refreshToken;
 
@@ -201,7 +189,6 @@ const logout = async (req, res, next) => {
   return ApiResponse.success(res, {}, 'Logged out successfully');
 };
 
-// ─── @POST /api/auth/logout-all ──────────────────────────────────────────────
 const logoutAll = async (req, res, next) => {
   const user = await User.findById(req.user._id).select('+refreshTokens');
   user.refreshTokens = [];
@@ -210,7 +197,6 @@ const logoutAll = async (req, res, next) => {
   return ApiResponse.success(res, {}, 'Logged out from all devices');
 };
 
-// ─── @POST /api/auth/forgot-password ─────────────────────────────────────────
 const forgotPassword = async (req, res, next) => {
   const { email } = req.body;
   const user = await User.findOne({ email });
@@ -237,7 +223,6 @@ const forgotPassword = async (req, res, next) => {
   );
 };
 
-// ─── @POST /api/auth/reset-password/:token ───────────────────────────────────
 const resetPassword = async (req, res, next) => {
   const { password } = req.body;
   const hashedToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
@@ -261,12 +246,10 @@ const resetPassword = async (req, res, next) => {
   return ApiResponse.success(res, {}, 'Password reset successful! Please login with your new password.');
 };
 
-// ─── @GET /api/auth/me ────────────────────────────────────────────────────────
 const getMe = async (req, res, next) => {
   return ApiResponse.success(res, { user: req.user }, 'Profile fetched');
 };
 
-// ─── @PUT /api/auth/update-profile ───────────────────────────────────────────
 const updateProfile = async (req, res, next) => {
   const { name, phone, addresses } = req.body;
   const user = await User.findByIdAndUpdate(
@@ -277,7 +260,6 @@ const updateProfile = async (req, res, next) => {
   return ApiResponse.success(res, { user }, 'Profile updated successfully');
 };
 
-// ─── @PUT /api/auth/change-password ──────────────────────────────────────────
 const changePassword = async (req, res, next) => {
   const { currentPassword, newPassword } = req.body;
   const user = await User.findById(req.user._id).select('+password');

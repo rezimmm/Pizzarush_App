@@ -1,7 +1,3 @@
-/**
- * routes/adminRoutes.js — Admin-only analytics and management routes
- */
-
 const router = require('express').Router();
 const { protect, restrictTo } = require('../middleware/authMiddleware');
 const {

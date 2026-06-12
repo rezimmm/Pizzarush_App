@@ -1,8 +1,3 @@
-/**
- * models/Cart.js — Shopping Cart Schema
- * Persists cart per user. Supports both predefined pizzas and custom builds.
- */
-
 const mongoose = require('mongoose');
 
 const customPizzaSchema = new mongoose.Schema({
@@ -66,7 +61,6 @@ const cartSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// ─── Pre-save Hook: Recalculate total ─────────────────────────────────────────
 cartSchema.pre('save', function (next) {
   this.totalAmount = this.items.reduce((sum, item) => sum + item.totalPrice, 0);
   next();

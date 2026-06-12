@@ -1,10 +1,6 @@
 import { Navigate, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-/**
- * Wraps routes that require authentication.
- * Shows a spinner while the auth state is initializing (first load).
- */
 export function ProtectedRoute({ children }) {
   const { isAuthenticated, isInitialized } = useSelector((state) => state.auth);
   const location = useLocation();
@@ -24,9 +20,6 @@ export function ProtectedRoute({ children }) {
   return children;
 }
 
-/**
- * Wraps routes that require admin privileges.
- */
 export function AdminRoute({ children }) {
   const { isAuthenticated, isInitialized, user } = useSelector((state) => state.auth);
   const location = useLocation();

@@ -1,14 +1,9 @@
-/**
- * controllers/adminController.js — Admin Analytics & Dashboard
- */
-
 const Order = require('../models/Order');
 const User = require('../models/User');
 const Inventory = require('../models/Inventory');
 const Payment = require('../models/Payment');
 const { ApiResponse } = require('../utils/apiResponse');
 
-// ─── GET /api/admin/analytics/overview ───────────────────────────────────────
 const getOverviewStats = async (req, res) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -45,7 +40,6 @@ const getOverviewStats = async (req, res) => {
   });
 };
 
-// ─── GET /api/admin/analytics/revenue-trend ──────────────────────────────────
 const getRevenueTrend = async (req, res) => {
   const { days = 7 } = req.query;
   const startDate = new Date();
@@ -80,7 +74,6 @@ const getRevenueTrend = async (req, res) => {
   return ApiResponse.success(res, { trend });
 };
 
-// ─── GET /api/admin/analytics/popular-items ───────────────────────────────────
 const getPopularItems = async (req, res) => {
   // Most ordered pizza bases (from custom orders)
   const popularBases = await Order.aggregate([
@@ -132,7 +125,6 @@ const getPopularItems = async (req, res) => {
   return ApiResponse.success(res, { popularBases, popularPizzas, popularVeggies });
 };
 
-// ─── GET /api/admin/analytics/orders-per-day ─────────────────────────────────
 const getOrdersPerDay = async (req, res) => {
   const { days = 30 } = req.query;
   const startDate = new Date();
@@ -153,7 +145,6 @@ const getOrdersPerDay = async (req, res) => {
   return ApiResponse.success(res, { data });
 };
 
-// ─── GET /api/admin/low-stock ─────────────────────────────────────────────────
 const getLowStockItems = async (req, res) => {
   const items = await Inventory.find({ $expr: { $lte: ['$quantity', '$threshold'] } });
   return ApiResponse.success(res, { items, count: items.length });

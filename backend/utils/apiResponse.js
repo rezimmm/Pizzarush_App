@@ -1,7 +1,3 @@
-/**
- * utils/apiResponse.js — Standardized API response helpers
- */
-
 class ApiResponse {
   static success(res, data = {}, message = 'Success', statusCode = 200) {
     return res.status(statusCode).json({
@@ -49,9 +45,6 @@ class ApiResponse {
   }
 }
 
-/**
- * Custom API Error class for use with express-async-errors
- */
 class AppError extends Error {
   constructor(message, statusCode = 500) {
     super(message);

@@ -1,7 +1,3 @@
-/**
- * routes/orderRoutes.js
- */
-
 const router = require('express').Router();
 const { protect, restrictTo } = require('../middleware/authMiddleware');
 const {

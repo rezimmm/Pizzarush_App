@@ -2,8 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../../api/axiosInstance';
 import toast from 'react-hot-toast';
 
-// ─── Async Thunks ─────────────────────────────────────────────────────────────
-
 export const fetchPizzas = createAsyncThunk(
   'pizza/fetchAll',
   async (params, { rejectWithValue }) => {
@@ -63,8 +61,6 @@ export const deletePizza = createAsyncThunk(
     }
   }
 );
-
-// ─── Slice ────────────────────────────────────────────────────────────────────
 
 const pizzaSlice = createSlice({
   name: 'pizza',

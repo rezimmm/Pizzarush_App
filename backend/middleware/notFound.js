@@ -1,7 +1,3 @@
-/**
- * middleware/notFound.js — 404 handler
- */
-
 const { AppError } = require('../utils/apiResponse');
 
 const notFound = (req, res, next) => {

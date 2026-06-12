@@ -1,14 +1,7 @@
-/**
- * middleware/authMiddleware.js — JWT Authentication & Authorization Middleware
- */
-
 const { verifyAccessToken } = require('../utils/jwtHelper');
 const { AppError } = require('../utils/apiResponse');
 const User = require('../models/User');
 
-/**
- * Protect routes — verifies JWT access token from Authorization header or cookie
- */
 const protect = async (req, res, next) => {
   let token;
 
@@ -52,10 +45,6 @@ const protect = async (req, res, next) => {
   }
 };
 
-/**
- * Restrict routes to specific roles
- * Usage: restrictTo('admin'), restrictTo('admin', 'manager')
- */
 const restrictTo = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
@@ -65,9 +54,6 @@ const restrictTo = (...roles) => {
   };
 };
 
-/**
- * Check email verification (use after protect)
- */
 const requireVerified = (req, res, next) => {
   if (!req.user.isVerified) {
     return next(new AppError('Please verify your email address before proceeding.', 403));

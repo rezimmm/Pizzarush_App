@@ -1,8 +1,3 @@
-/**
- * models/Inventory.js — Inventory Schema
- * Tracks stock for pizza bases, sauces, cheeses, veggies, and meats.
- */
-
 const mongoose = require('mongoose');
 
 const inventoryLogSchema = new mongoose.Schema({
@@ -68,21 +63,17 @@ const inventorySchema = new mongoose.Schema(
   }
 );
 
-// ─── Virtual: isLowStock ──────────────────────────────────────────────────────
 inventorySchema.virtual('isLowStock').get(function () {
   return this.quantity <= this.threshold;
 });
 
-// ─── Virtual: isOutOfStock ────────────────────────────────────────────────────
 inventorySchema.virtual('isOutOfStock').get(function () {
   return this.quantity <= 0;
 });
 
-// ─── Index ────────────────────────────────────────────────────────────────────
 inventorySchema.index({ category: 1, isAvailable: 1 });
 inventorySchema.index({ itemName: 1 });
 
-// ─── Middleware: Auto-set isAvailable based on quantity ───────────────────────
 inventorySchema.pre('save', function (next) {
   this.isAvailable = this.quantity > 0;
   next();

@@ -1,8 +1,3 @@
-/**
- * server.js — Main entry point for Pizza Delivery App Backend
- * Initializes Express, MongoDB, Socket.io, and starts the HTTP server.
- */
-
 require('dotenv').config();
 require('express-async-errors');
 

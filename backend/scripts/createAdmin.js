@@ -1,9 +1,3 @@
-/**
- * scripts/createAdmin.js
- * Run once: node scripts/createAdmin.js
- * Creates (or promotes) an admin user in the database.
- */
-
 require('dotenv').config();
 const mongoose = require('mongoose');
 const User = require('../models/User');

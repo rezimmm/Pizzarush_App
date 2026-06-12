@@ -1,8 +1,3 @@
-/**
- * models/Payment.js — Payment Schema
- * Tracks Razorpay payment details and verification status.
- */
-
 const mongoose = require('mongoose');
 
 const paymentSchema = new mongoose.Schema(

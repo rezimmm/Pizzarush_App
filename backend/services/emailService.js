@@ -1,8 +1,3 @@
-/**
- * services/emailService.js — Nodemailer Email Service
- * Handles all transactional emails: verification, password reset, order confirmation.
- */
-
 const nodemailer = require('nodemailer');
 const logger = require('../utils/logger');
 
@@ -41,9 +36,6 @@ const createTransporter = async () => {
   return transporter;
 };
 
-/**
- * Core send function
- */
 const sendEmail = async ({ to, subject, html, text }) => {
   try {
     const transport = await createTransporter();
@@ -66,8 +58,6 @@ const sendEmail = async ({ to, subject, html, text }) => {
     return { success: false, error: error.message };
   }
 };
-
-// ─── Email Templates ──────────────────────────────────────────────────────────
 
 const emailBase = (content) => `
 <!DOCTYPE html>
@@ -107,9 +97,6 @@ const emailBase = (content) => `
 </body>
 </html>`;
 
-/**
- * Send email verification email
- */
 const sendVerificationEmail = async (user, verificationUrl) => {
   const html = emailBase(`
     <h2>Verify Your Email 📧</h2>
@@ -129,9 +116,6 @@ const sendVerificationEmail = async (user, verificationUrl) => {
   return sendEmail({ to: user.email, subject: '✅ Verify Your PizzaHub Account', html });
 };
 
-/**
- * Send password reset email
- */
 const sendPasswordResetEmail = async (user, resetUrl) => {
   const html = emailBase(`
     <h2>Reset Your Password 🔐</h2>
@@ -149,9 +133,6 @@ const sendPasswordResetEmail = async (user, resetUrl) => {
   return sendEmail({ to: user.email, subject: '🔐 Reset Your PizzaHub Password', html });
 };
 
-/**
- * Send order confirmation email
- */
 const sendOrderConfirmationEmail = async (user, order) => {
   const itemRows = order.items.map(item => `
     <tr>
@@ -192,9 +173,6 @@ const sendOrderConfirmationEmail = async (user, order) => {
   return sendEmail({ to: user.email, subject: `🍕 Order Confirmed! #${order.orderId}`, html });
 };
 
-/**
- * Send order delivered email
- */
 const sendOrderDeliveredEmail = async (user, order) => {
   const html = emailBase(`
     <h2>Your Order Has Been Delivered! 🚀</h2>
@@ -209,9 +187,6 @@ const sendOrderDeliveredEmail = async (user, order) => {
   return sendEmail({ to: user.email, subject: `🚀 Delivered! Order #${order.orderId}`, html });
 };
 
-/**
- * Send low stock alert to admin
- */
 const sendLowStockAlert = async (adminEmail, stockItems) => {
   const itemRows = stockItems.map(item => `
     <tr>
@@ -249,9 +224,6 @@ const sendLowStockAlert = async (adminEmail, stockItems) => {
   });
 };
 
-/**
- * Send new order notification to admin
- */
 const sendNewOrderNotificationToAdmin = async (adminEmail, order, user) => {
   const html = emailBase(`
     <h2>🆕 New Order Received!</h2>

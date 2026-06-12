@@ -2,8 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../../api/axiosInstance';
 import toast from 'react-hot-toast';
 
-// ─── Async Thunks ─────────────────────────────────────────────────────────────
-
 export const createOrder = createAsyncThunk(
   'order/create',
   async (data, { rejectWithValue }) => {
@@ -63,8 +61,6 @@ export const updateOrderStatus = createAsyncThunk(
     }
   }
 );
-
-// ─── Slice ────────────────────────────────────────────────────────────────────
 
 const orderSlice = createSlice({
   name: 'order',

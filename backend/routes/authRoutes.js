@@ -1,7 +1,3 @@
-/**
- * routes/authRoutes.js
- */
-
 const router = require('express').Router();
 const { body, param } = require('express-validator');
 const validate = require('../middleware/validate');
@@ -21,7 +17,6 @@ const {
   changePassword,
 } = require('../controllers/authController');
 
-// ─── Validation Rules ─────────────────────────────────────────────────────────
 const registerValidation = [
   body('name').trim().notEmpty().withMessage('Name is required').isLength({ min: 2, max: 50 }),
   body('email').isEmail().withMessage('Valid email is required').normalizeEmail(),
@@ -41,7 +36,6 @@ const loginValidation = [
   body('password').notEmpty().withMessage('Password is required'),
 ];
 
-// ─── Public Routes ────────────────────────────────────────────────────────────
 router.post('/register', registerValidation, validate, register);
 router.get('/verify-email/:token', verifyEmail);
 router.post('/resend-verification', body('email').isEmail(), validate, resendVerification);
@@ -54,7 +48,6 @@ router.post('/reset-password/:token',
   resetPassword
 );
 
-// ─── Protected Routes ─────────────────────────────────────────────────────────
 router.use(protect); // All routes below require authentication
 
 router.get('/me', getMe);

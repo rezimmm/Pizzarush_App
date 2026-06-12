@@ -1,8 +1,3 @@
-/**
- * app.js — Express application setup
- * Configures all middleware, routes, and error handlers.
- */
-
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -27,7 +22,6 @@ const notFound = require('./middleware/notFound');
 
 const app = express();
 
-// ─── CORS ─────────────────────────────────────────────────────────────────────
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:5173',
   credentials: true,
@@ -35,7 +29,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-// ─── Security Middleware ──────────────────────────────────────────────────────
 app.use(helmet({
   // Allow Razorpay checkout iframes and scripts
   contentSecurityPolicy: {
@@ -87,8 +80,6 @@ app.use(xssClean());                        // Sanitize against XSS attacks
 app.use(hpp());                             // Prevent HTTP Parameter Pollution
 app.use(compression());                     // Compress responses
 
-
-// ─── Rate Limiting ────────────────────────────────────────────────────────────
 const globalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 500,
@@ -108,25 +99,20 @@ const authLimiter = rateLimit({
 app.use('/api', globalLimiter);
 app.use('/api/auth', authLimiter);
 
-// ─── Body Parsing & Cookies ───────────────────────────────────────────────────
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
-// ─── Request Logger (Dev only) ────────────────────────────────────────────────
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-// ─── Static Files ─────────────────────────────────────────────────────────────
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// ─── Health Check ─────────────────────────────────────────────────────────────
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// ─── Routes ───────────────────────────────────────────────────────────────────
 app.use('/api/auth', authRoutes);
 app.use('/api/pizzas', pizzaRoutes);
 app.use('/api/inventory', inventoryRoutes);
@@ -135,7 +121,6 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/admin', adminRoutes);
 
-// ─── 404 & Error Handlers ─────────────────────────────────────────────────────
 app.use(notFound);
 app.use(errorHandler);
 

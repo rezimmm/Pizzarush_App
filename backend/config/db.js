@@ -1,7 +1,3 @@
-/**
- * config/db.js — MongoDB connection using Mongoose
- */
-
 const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 

@@ -1,8 +1,3 @@
-/**
- * models/Order.js — Order Schema
- * Captures all order details including items, payment status, and delivery tracking.
- */
-
 const mongoose = require('mongoose');
 
 const orderItemSchema = new mongoose.Schema({
@@ -93,7 +88,6 @@ const orderSchema = new mongoose.Schema(
   }
 );
 
-// ─── Pre-save: Generate Order ID ──────────────────────────────────────────────
 orderSchema.pre('save', function (next) {
   if (!this.orderId) {
     const date = new Date();

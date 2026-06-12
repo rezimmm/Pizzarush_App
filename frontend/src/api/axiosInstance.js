@@ -8,13 +8,11 @@ const api = axios.create({
   headers: { 'Content-Type': 'application/json' },
 });
 
-// ─── Lazy store injection (breaks circular dependency) ─────────────────────────
 let _store = null;
 export function injectStore(store) {
   _store = store;
 }
 
-// ─── Request Interceptor: attach access token ─────────────────────────────────
 api.interceptors.request.use(
   (config) => {
     if (_store) {
@@ -28,7 +26,6 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// ─── Response Interceptor: handle 401 + token refresh ────────────────────────
 let isRefreshing = false;
 let pendingRequests = [];
 
