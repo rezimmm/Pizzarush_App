@@ -42,6 +42,7 @@ const sendTokens = async (res, user, statusCode = 200, message = 'Success') => {
     isVerified: user.isVerified,
     avatar: user.avatar,
     phone: user.phone,
+    addresses: user.addresses || [],
   };
 
   return ApiResponse.success(res, { accessToken, user: userData }, message, statusCode);
@@ -241,9 +242,16 @@ const getMe = async (req, res, next) => {
 
 const updateProfile = async (req, res, next) => {
   const { name, phone, addresses } = req.body;
+
+  // Build update object only with fields that were provided
+  const updateFields = {};
+  if (name !== undefined) updateFields.name = name;
+  if (phone !== undefined) updateFields.phone = phone;
+  if (addresses !== undefined) updateFields.addresses = addresses;
+
   const user = await User.findByIdAndUpdate(
     req.user._id,
-    { name, phone, addresses },
+    { $set: updateFields },
     { new: true, runValidators: true }
   );
   return ApiResponse.success(res, { user }, 'Profile updated successfully');
