@@ -42,7 +42,6 @@ export const fetchMe = createAsyncThunk(
   'auth/fetchMe',
   async (_, { rejectWithValue }) => {
     try {
-
       const refreshRes = await axios.post(
         `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/refresh`,
         {},
@@ -55,9 +54,13 @@ export const fetchMe = createAsyncThunk(
       });
 
       return { user: meRes.data.data.user, accessToken };
-    } catch {
-
-      return rejectWithValue(null);
+    } catch (err) {
+      // Only treat explicit 401 as a definitive auth failure.
+      // Network errors (no response) or 5xx (server cold start) should
+      // NOT wipe the session — the user may still be logged in.
+      const status = err?.response?.status;
+      const isAuthFailure = status === 401 || status === 403;
+      return rejectWithValue({ isAuthFailure });
     }
   }
 );
@@ -148,12 +151,19 @@ const authSlice = createSlice({
         state.isAuthenticated = true;
         state.isInitialized = true;
       })
-      .addCase(fetchMe.rejected, (state) => {
-
+      .addCase(fetchMe.rejected, (state, action) => {
         state.isLoading = false;
-        state.isAuthenticated = false;
         state.isInitialized = true;
-        localStorage.removeItem('isLoggedIn');
+        const isAuthFailure = action.payload?.isAuthFailure ?? true;
+        if (isAuthFailure) {
+          // Definitive auth failure (401/403) — clear session
+          state.isAuthenticated = false;
+          state.user = null;
+          state.accessToken = null;
+          localStorage.removeItem('isLoggedIn');
+        }
+        // For network/server errors, keep isAuthenticated as-is so the
+        // user isn't falsely logged out on a transient failure.
       });
 
     builder
