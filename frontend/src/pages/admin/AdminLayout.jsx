@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   LayoutDashboard, Package, ShoppingBag, BarChart2, Pizza, LogOut, ChevronRight
@@ -28,7 +28,7 @@ export default function AdminLayout() {
       {}
       <aside className="w-60 flex-shrink-0 bg-surface-card border-r border-surface-border flex flex-col fixed left-0 top-0 h-full z-40">
         {}
-        <div className="flex items-center gap-2.5 px-5 py-5 border-b border-surface-border">
+        <Link to="/" className="flex items-center gap-2.5 px-5 py-5 border-b border-surface-border hover:bg-surface-elevated/40 transition-colors">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-brand">
             <Pizza size={18} className="text-white" />
           </div>
@@ -36,7 +36,7 @@ export default function AdminLayout() {
             <span className="font-display font-bold text-base text-gradient">PizzaRush</span>
             <p className="text-[10px] text-gray-500 -mt-0.5">Admin Panel</p>
           </div>
-        </div>
+        </Link>
 
         {}
         <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
