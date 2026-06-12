@@ -894,3 +894,31 @@
 [2026-06-12 15:41:21] error: ReferenceError: hashedRefreshToken is not defined
     at sendTokens (D:\Pizza_Delivery_App\backend\controllers\authController.js:33:19)
     at login (D:\Pizza_Delivery_App\backend\controllers\authController.js:146:10)
+[2026-06-12 15:41:58] info: ✅ Socket.io initialized
+[2026-06-12 15:41:58] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 15:42:03] info: 🕐 Running low stock check...
+[2026-06-12 15:42:12] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 15:42:12] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 15:42:12] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 15:42:29] warn: ⚠️  MongoDB disconnected. Attempting to reconnect...
+[2026-06-12 15:42:30] info: ✅ MongoDB reconnected
+[2026-06-12 15:42:33] info: ✅ All inventory levels are healthy
+[2026-06-12 15:43:32] info: ✅ User logged in: rezimtitoria04@gmail.com | Role: customer
+[2026-06-12 15:52:46] warn: ⚠️  MongoDB disconnected. Attempting to reconnect...
+[2026-06-12 15:52:51] info: ✅ MongoDB reconnected
+[2026-06-12 15:54:58] info: 📦 Order created: PZH-20260612-1180 for user: rezimtitoria04@gmail.com
+[2026-06-12 15:54:58] info: 💳 Razorpay order created: order_T0gagWBDzFPPa8
+[2026-06-12 15:54:59] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-12 15:54:59] info:    User: gzggmpoq46rfrtf7@ethereal.email | Pass: 1EknVhFAw8KRTWhxGm
+[2026-06-12 15:54:59] info: 📧 Ethereal Email created. Preview at: https://ethereal.email
+[2026-06-12 15:54:59] info:    User: hs6cgjxrfpzrj7qa@ethereal.email | Pass: hXZUUZSBrPaQqSQPKk
+[2026-06-12 15:55:05] info: 📧 Email sent: <015fa15b-bdda-0e6f-f2b7-d88c9b3801e1@pizzahub.com>
+[2026-06-12 15:55:05] info:    Preview URL: https://ethereal.email/message/aivefUe-jEewJxhyaiveg.sdSb1Tg0TbAAAAAUzKjb.58LKvlS7qO8OA-a8
+[2026-06-12 15:55:05] info: 📧 Email sent: <349d56a2-4b03-9705-ed4f-6447df89a7ed@pizzahub.com>
+[2026-06-12 15:55:05] info:    Preview URL: https://ethereal.email/message/aivefUe-jEewJxiEaiveg0aRd.PI0WNxAAAAAaOOqlkxtvrQz.IjvXWY.hY
+[2026-06-12 15:55:24] info: 💳 Payment verified: pay_T0gao9YoUqUBZY for order PZH-20260612-1180
+[2026-06-12 15:55:24] info: 🔌 Socket connected: 1JSy-HowrzUKazY2AAAC | User: 6a2bd1ae91579cbacc68ce00
+[2026-06-12 15:55:24] info: 📦 User tracking order: 6a2bde79a09ec5f2f14117de
+[2026-06-12 15:55:37] info: 🔌 Socket disconnected: 1JSy-HowrzUKazY2AAAC | Reason: client namespace disconnect
+[2026-06-12 16:00:00] info: 🕐 Running low stock check...
+[2026-06-12 16:00:00] info: ✅ All inventory levels are healthy
