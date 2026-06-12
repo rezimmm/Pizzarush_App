@@ -7,7 +7,9 @@ export const fetchPizzas = createAsyncThunk(
   async (params, { rejectWithValue }) => {
     try {
       const res = await api.get('/pizzas', { params });
-      return res.data.data;
+      // ApiResponse.paginated puts pagination at the top level (res.data.pagination),
+      // separate from the data payload (res.data.data). Merge them together.
+      return { ...res.data.data, ...res.data.pagination };
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || 'Failed to fetch pizzas');
     }

@@ -9,10 +9,10 @@ import PizzaDetailModal from '../components/PizzaDetailModal';
 
 const CATEGORIES = ['All', 'Veg', 'Non-Veg', 'Premium', 'Combo'];
 const SORT_OPTIONS = [
-  { value: 'name', label: 'Name (A-Z)' },
-  { value: '-createdAt', label: 'Newest' },
-  { value: 'basePrice', label: 'Price: Low → High' },
-  { value: '-basePrice', label: 'Price: High → Low' },
+  { value: 'name_asc', label: 'Name (A-Z)' },
+  { value: 'newest', label: 'Newest' },
+  { value: 'price_asc', label: 'Price: Low → High' },
+  { value: 'price_desc', label: 'Price: High → Low' },
 ];
 
 export default function MenuPage() {
@@ -27,7 +27,7 @@ export default function MenuPage() {
     dispatch(fetchPizzas({
       category: filters.category || undefined,
       search: filters.search || undefined,
-      sortBy: filters.sortBy || 'name',
+      sort: filters.sortBy || 'name_asc',
       page: filters.page || 1,
     }));
   }, [dispatch, filters]);

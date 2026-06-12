@@ -18,10 +18,11 @@ const getAllPizzas = async (req, res) => {
     filter.isAvailable = true;
   }
 
-  let sortOption = { createdAt: -1 };
-  if (sort === 'price_asc') sortOption = { price: 1 };
-  else if (sort === 'price_desc') sortOption = { price: -1 };
+  let sortOption = { name: 1 };
+  if (sort === 'price_asc') sortOption = { basePrice: 1 };
+  else if (sort === 'price_desc') sortOption = { basePrice: -1 };
   else if (sort === 'name_asc') sortOption = { name: 1 };
+  else if (sort === 'newest') sortOption = { createdAt: -1 };
   else if (sort === 'popular') sortOption = { 'ratings.average': -1 };
 
   const skip = (Number(page) - 1) * Number(limit);

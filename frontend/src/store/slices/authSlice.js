@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-import api from '../../api/axiosInstance';
+import api, { doRefresh } from '../../api/axiosInstance';
 import toast from 'react-hot-toast';
 
 export const registerUser = createAsyncThunk(
@@ -42,22 +41,21 @@ export const fetchMe = createAsyncThunk(
   'auth/fetchMe',
   async (_, { rejectWithValue }) => {
     try {
-      const refreshRes = await axios.post(
-        `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/refresh`,
-        {},
-        { withCredentials: true }
-      );
-      const { accessToken } = refreshRes.data.data;
+      // Step 1: Call the shared refresh function.
+      // doRefresh() uses a single shared Promise — if the axios interceptor is
+      // also trying to refresh at the same time, both will share the same HTTP
+      // call and the refresh token cookie is only consumed once.
+      const accessToken = await doRefresh();
 
+      // Step 2: Fetch the current user with the fresh access token.
       const meRes = await api.get('/auth/me', {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
 
       return { user: meRes.data.data.user, accessToken };
     } catch (err) {
-      // Only treat explicit 401 as a definitive auth failure.
-      // Network errors (no response) or 5xx (server cold start) should
-      // NOT wipe the session — the user may still be logged in.
+      // Only treat explicit 401/403 as a definitive auth failure.
+      // Network errors or 5xx (Render cold start) should NOT clear the session.
       const status = err?.response?.status;
       const isAuthFailure = status === 401 || status === 403;
       return rejectWithValue({ isAuthFailure });
