@@ -23,7 +23,6 @@ export default function MenuPage() {
   const [searchInput, setSearchInput] = useState('');
   const [showFilters, setShowFilters] = useState(false);
 
-  // Fetch pizzas whenever filters change
   useEffect(() => {
     dispatch(fetchPizzas({
       category: filters.category || undefined,
@@ -33,12 +32,10 @@ export default function MenuPage() {
     }));
   }, [dispatch, filters]);
 
-  // Fetch cart on mount if authenticated
   useEffect(() => {
     if (isAuthenticated) dispatch(fetchCart());
   }, [dispatch, isAuthenticated]);
 
-  // Debounced search
   useEffect(() => {
     const timer = setTimeout(() => {
       dispatch(setFilters({ search: searchInput }));

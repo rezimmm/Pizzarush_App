@@ -10,16 +10,12 @@ const logger = require('./utils/logger');
 
 const PORT = process.env.PORT || 5000;
 
-// Create HTTP server (needed for Socket.io)
 const server = http.createServer(app);
 
-// Initialize Socket.io
 initializeSocket(server);
 
-// Start cron jobs
 startCronJobs();
 
-// Start server after connecting to DB
 const startServer = async () => {
   try {
     await connectDB();
@@ -35,13 +31,11 @@ const startServer = async () => {
 
 startServer();
 
-// Handle unhandled promise rejections
 process.on('unhandledRejection', (err) => {
   logger.error('UNHANDLED REJECTION! Shutting down...', err);
   server.close(() => process.exit(1));
 });
 
-// Handle uncaught exceptions
 process.on('uncaughtException', (err) => {
   logger.error('UNCAUGHT EXCEPTION! Shutting down...', err);
   process.exit(1);

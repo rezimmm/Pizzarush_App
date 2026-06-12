@@ -11,7 +11,6 @@ export default function CartSidebar() {
   const dispatch = useDispatch();
   const { isOpen, items, totalAmount, isLoading } = useSelector((s) => s.cart);
 
-  // Prevent body scroll when cart is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };

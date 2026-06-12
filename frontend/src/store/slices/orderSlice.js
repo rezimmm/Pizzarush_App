@@ -42,7 +42,7 @@ export const fetchAllOrders = createAsyncThunk(
   'order/fetchAll',
   async (params, { rejectWithValue }) => {
     try {
-      const res = await api.get('/orders/admin/all', { params }); // correct backend route
+      const res = await api.get('/orders/admin/all', { params });
       return res.data.data;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || 'Failed to fetch all orders');
@@ -73,8 +73,7 @@ const orderSlice = createSlice({
   },
   reducers: {
     updateOrderRealtime(state, action) {
-      // Called by Socket.io listener — payload may be partial {_id, orderStatus}
-      // or a full order object. Merge to preserve all existing fields.
+
       const updated = action.payload;
       if (state.currentOrder?._id === updated._id) {
         state.currentOrder = { ...state.currentOrder, ...updated };

@@ -7,7 +7,6 @@ import { store } from './store/store';
 import { injectStore } from './api/axiosInstance';
 import './index.css';
 
-// Break circular dependency: inject store into axios after store is created
 injectStore(store);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

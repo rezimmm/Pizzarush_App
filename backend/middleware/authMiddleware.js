@@ -5,11 +5,10 @@ const User = require('../models/User');
 const protect = async (req, res, next) => {
   let token;
 
-  // Check Authorization header (Bearer token)
   if (req.headers.authorization && req.headers.authorization.startsWith('Bearer ')) {
     token = req.headers.authorization.split(' ')[1];
   } else if (req.cookies?.accessToken) {
-    // Also check cookies
+
     token = req.cookies.accessToken;
   }
 
@@ -20,7 +19,6 @@ const protect = async (req, res, next) => {
   try {
     const decoded = verifyAccessToken(token);
 
-    // Fetch user from DB (to check if still active/existing)
     const user = await User.findById(decoded.id).select('-password -refreshTokens');
 
     if (!user) {
@@ -31,7 +29,6 @@ const protect = async (req, res, next) => {
       return next(new AppError('Your account has been deactivated. Please contact support.', 403));
     }
 
-    // Attach user to request
     req.user = user;
     next();
   } catch (err) {

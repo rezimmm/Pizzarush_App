@@ -4,12 +4,11 @@ const logger = require('../utils/logger');
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      // Modern Mongoose doesn't need deprecated options
+
     });
 
     logger.info(`✅ MongoDB Connected: ${conn.connection.host}`);
 
-    // Log when disconnected
     mongoose.connection.on('disconnected', () => {
       logger.warn('⚠️  MongoDB disconnected. Attempting to reconnect...');
     });

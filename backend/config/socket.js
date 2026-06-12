@@ -33,7 +33,6 @@ const initializeSocket = (server) => {
   io.on('connection', (socket) => {
     logger.info(`🔌 Socket connected: ${socket.id} | User: ${socket.userId}`);
 
-    // User joins their personal room to receive order updates
     socket.on('join_user_room', (userId) => {
       if (userId === socket.userId) {
         socket.join(`user_${userId}`);
@@ -41,7 +40,6 @@ const initializeSocket = (server) => {
       }
     });
 
-    // Admin joins admin room
     socket.on('join_admin_room', () => {
       if (socket.userRole === 'admin') {
         socket.join('admin_room');
@@ -49,7 +47,6 @@ const initializeSocket = (server) => {
       }
     });
 
-    // Join specific order room for tracking
     socket.on('track_order', (orderId) => {
       socket.join(`order_${orderId}`);
       logger.info(`📦 User tracking order: ${orderId}`);
@@ -68,7 +65,6 @@ const initializeSocket = (server) => {
   return io;
 };
 
-// Get io instance (for use in controllers)
 const getIO = () => {
   if (!io) throw new Error('Socket.io not initialized');
   return io;

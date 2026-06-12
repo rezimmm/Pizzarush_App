@@ -1,14 +1,13 @@
 const nodemailer = require('nodemailer');
 const logger = require('../utils/logger');
 
-// Create reusable transporter
 let transporter;
 
 const createTransporter = async () => {
   if (transporter) return transporter;
 
   if (process.env.NODE_ENV === 'development' && process.env.EMAIL_HOST === 'smtp.ethereal.email') {
-    // Auto-create Ethereal test account for development
+
     const testAccount = await nodemailer.createTestAccount();
     transporter = nodemailer.createTransport({
       host: 'smtp.ethereal.email',

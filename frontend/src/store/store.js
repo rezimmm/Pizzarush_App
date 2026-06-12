@@ -1,6 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-// Import reducers only (no thunks, no api calls)
 import authReducer from './slices/authSlice';
 import cartReducer from './slices/cartSlice';
 import pizzaReducer from './slices/pizzaSlice';

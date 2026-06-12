@@ -48,7 +48,7 @@ router.post('/reset-password/:token',
   resetPassword
 );
 
-router.use(protect); // All routes below require authentication
+router.use(protect);
 
 router.get('/me', getMe);
 router.post('/logout', logout);

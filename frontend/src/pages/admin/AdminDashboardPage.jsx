@@ -39,7 +39,6 @@ function StatCard({ icon: Icon, label, value, sub, color = 'brand' }) {
   );
 }
 
-// Build last-7-days chart data from orders
 function buildRevenueData(orders) {
   const map = {};
   for (let i = 6; i >= 0; i--) {

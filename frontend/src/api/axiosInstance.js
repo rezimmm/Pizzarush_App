@@ -4,7 +4,7 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const api = axios.create({
   baseURL: API_URL,
-  withCredentials: true, // send cookies (refresh token)
+  withCredentials: true,
   headers: { 'Content-Type': 'application/json' },
 });
 
@@ -29,7 +29,6 @@ api.interceptors.request.use(
 let isRefreshing = false;
 let pendingRequests = [];
 
-// Auth endpoints that should NEVER trigger a refresh retry
 const AUTH_SKIP_PATHS = ['/auth/login', '/auth/register', '/auth/refresh', '/auth/logout', '/auth/forgot-password'];
 
 api.interceptors.response.use(
@@ -37,13 +36,12 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    // Skip refresh logic for auth endpoints and already-retried requests
     const requestPath = originalRequest?.url || '';
     const isAuthRoute = AUTH_SKIP_PATHS.some((p) => requestPath.includes(p));
 
     if (error.response?.status === 401 && !originalRequest._retry && !isAuthRoute) {
       if (isRefreshing) {
-        // Queue request until refresh completes
+
         return new Promise((resolve, reject) => {
           pendingRequests.push({ resolve, reject });
         })
@@ -70,19 +68,18 @@ api.interceptors.response.use(
           _store.dispatch(setAccessToken(accessToken));
         }
 
-        // Retry all pending requests
         pendingRequests.forEach(({ resolve }) => resolve(accessToken));
         pendingRequests = [];
 
         originalRequest.headers.Authorization = `Bearer ${accessToken}`;
         return api(originalRequest);
       } catch (refreshError) {
-        // Refresh failed — log user out silently
+
         pendingRequests.forEach(({ reject }) => reject(refreshError));
         pendingRequests = [];
         if (_store) {
           const currentState = _store.getState().auth;
-          // Only dispatch logout if user was actually authenticated
+
           if (currentState.isAuthenticated) {
             const { logout } = await import('../store/slices/authSlice');
             _store.dispatch(logout());

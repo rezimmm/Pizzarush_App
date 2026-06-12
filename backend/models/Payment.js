@@ -12,7 +12,7 @@ const paymentSchema = new mongoose.Schema(
       ref: 'User',
       required: true,
     },
-    // Razorpay IDs
+
     razorpayOrderId: {
       type: String,
       required: true,
@@ -29,7 +29,7 @@ const paymentSchema = new mongoose.Schema(
 
     amount: {
       type: Number,
-      required: true, // in paise (INR × 100)
+      required: true,
     },
     currency: {
       type: String,
@@ -40,10 +40,10 @@ const paymentSchema = new mongoose.Schema(
       enum: ['created', 'authorized', 'captured', 'failed', 'refunded'],
       default: 'created',
     },
-    method: { type: String, default: '' }, // card, upi, netbanking, wallet
+    method: { type: String, default: '' },
     bank: { type: String, default: '' },
     wallet: { type: String, default: '' },
-    vpa: { type: String, default: '' },   // UPI VPA
+    vpa: { type: String, default: '' },
     errorCode: { type: String, default: '' },
     errorDescription: { type: String, default: '' },
     notes: { type: Map, of: String },
@@ -53,7 +53,7 @@ const paymentSchema = new mongoose.Schema(
 );
 
 paymentSchema.index({ order: 1 });
-// razorpayOrderId index is auto-created by unique:true on the field
+
 paymentSchema.index({ user: 1 });
 
 const Payment = mongoose.model('Payment', paymentSchema);

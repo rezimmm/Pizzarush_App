@@ -11,13 +11,12 @@ const {
 const logger = require('../utils/logger');
 
 const DELIVERY_FEE = 40;
-const TAX_RATE = 0.05; // 5%
+const TAX_RATE = 0.05;
 
 const deductInventory = async (items, orderId, adminUserId) => {
   for (const item of items) {
     if (item.itemType === 'custom' && item.customDetails) {
-      // We only track base/sauce/cheese as unit deductions for simplicity
-      // For production, you'd track per-ingredient based on quantity
+
       const ingredientNames = [
         item.customDetails.base,
         item.customDetails.sauce,
@@ -46,13 +45,11 @@ const deductInventory = async (items, orderId, adminUserId) => {
 const createOrder = async (req, res, next) => {
   const { deliveryAddress, paymentMethod = 'razorpay', notes } = req.body;
 
-  // Get user's cart
   const cart = await Cart.findOne({ user: req.user._id });
   if (!cart || cart.items.length === 0) {
     return next(new AppError('Your cart is empty', 400));
   }
 
-  // Build order items
   const orderItems = cart.items.map((cartItem) => {
     if (cartItem.itemType === 'pizza') {
       return {
@@ -86,7 +83,6 @@ const createOrder = async (req, res, next) => {
   const taxes = Math.round(subtotal * TAX_RATE);
   const totalAmount = subtotal + taxes + DELIVERY_FEE;
 
-  // Create order
   const order = await Order.create({
     user: req.user._id,
     items: orderItems,
@@ -98,12 +94,11 @@ const createOrder = async (req, res, next) => {
     paymentMethod,
     notes,
     statusHistory: [{ status: 'order_received', updatedBy: req.user._id }],
-    estimatedDelivery: new Date(Date.now() + 45 * 60 * 1000), // 45 mins
+    estimatedDelivery: new Date(Date.now() + 45 * 60 * 1000),
   });
 
   logger.info(`📦 Order created: ${order.orderId} for user: ${req.user.email}`);
 
-  // Emit new order notification via Socket.io
   try {
     const io = getIO();
     io.to('admin_room').emit('new_order', {
@@ -118,7 +113,6 @@ const createOrder = async (req, res, next) => {
     logger.warn('Socket.io emit failed (new_order):', e.message);
   }
 
-  // Send notification emails (non-blocking)
   sendOrderConfirmationEmail(req.user, order).catch(logger.error);
   sendNewOrderNotificationToAdmin(
     process.env.ADMIN_EMAIL,
@@ -149,7 +143,6 @@ const getMyOrders = async (req, res) => {
 const getOrderById = async (req, res, next) => {
   const query = { _id: req.params.id };
 
-  // Non-admin users can only see their own orders
   if (req.user.role !== 'admin') {
     query.user = req.user._id;
   }
@@ -177,15 +170,14 @@ const updateOrderStatus = async (req, res, next) => {
 
   if (status === 'delivered') {
     order.deliveredAt = new Date();
-    // Deduct inventory on delivery (you can also do this on confirmation)
+
     deductInventory(order.items, order._id, req.user._id).catch(logger.error);
-    // Send delivery email
+
     sendOrderDeliveredEmail(order.user, order).catch(logger.error);
   }
 
   await order.save();
 
-  // Emit real-time status update to customer
   try {
     const io = getIO();
     const statusPayload = {
@@ -196,9 +188,8 @@ const updateOrderStatus = async (req, res, next) => {
       note,
     };
 
-    // Push to specific order room
     io.to(`order_${order._id}`).emit('order_status_update', statusPayload);
-    // Also push to user's personal room
+
     io.to(`user_${order.user._id}`).emit('order_status_update', statusPayload);
   } catch (e) {
     logger.warn('Socket.io emit failed (order_status_update):', e.message);

@@ -4,32 +4,27 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchMe } from './store/slices/authSlice';
 
-// Layout components
 import Navbar from './components/Navbar';
 import CartSidebar from './components/CartSidebar';
 import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute';
 
-// Public pages
 import MenuPage from './pages/MenuPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 
-// Protected user pages
 import CheckoutPage from './pages/CheckoutPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 import OrderTrackingPage from './pages/OrderTrackingPage';
 import ProfilePage from './pages/ProfilePage';
 
-// Admin pages
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboardPage from './pages/admin/AdminDashboardPage';
 import AdminOrdersPage from './pages/admin/AdminOrdersPage';
 import AdminInventoryPage from './pages/admin/AdminInventoryPage';
 import AdminPizzasPage from './pages/admin/AdminPizzasPage';
 
-// Public layout wrapper (Navbar + CartSidebar)
 function PublicLayout({ children }) {
   return (
     <>
@@ -44,7 +39,6 @@ export default function App() {
   const dispatch = useDispatch();
   const { isInitialized } = useSelector((s) => s.auth);
 
-  // Silently try to refresh auth on first load if the user was previously logged in
   useEffect(() => {
     if (localStorage.getItem('isLoggedIn') === 'true') {
       dispatch(fetchMe());
@@ -53,7 +47,6 @@ export default function App() {
     }
   }, [dispatch]);
 
-  // Wait for auth state to initialize before rendering routes
   if (!isInitialized) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-surface">

@@ -4,7 +4,6 @@ import { fetchPizzas, createPizza, updatePizza, deletePizza } from '../../store/
 import { Plus, Edit2, Trash2, X, Check, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// Must match Pizza model enum values exactly
 const CATEGORIES = ['veg', 'non-veg', 'vegan'];
 const CATEGORY_LABELS = { 'veg': '🥦 Veg', 'non-veg': '🍗 Non-Veg', 'vegan': '🌱 Vegan' };
 

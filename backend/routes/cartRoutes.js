@@ -8,7 +8,7 @@ const {
   clearCart,
 } = require('../controllers/cartController');
 
-router.use(protect); // All cart routes require authentication
+router.use(protect);
 
 router.get('/', getCart);
 router.post('/add', addToCart);

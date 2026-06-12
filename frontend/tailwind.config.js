@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand palette
+
         brand: {
           50:  '#fff5f0',
           100: '#ffe8dc',
@@ -18,7 +18,7 @@ export default {
           900: '#882800',
           950: '#4a1100',
         },
-        // Dark mode surface colors
+
         dark: {
           50:  '#1a1a2e',
           100: '#16213e',

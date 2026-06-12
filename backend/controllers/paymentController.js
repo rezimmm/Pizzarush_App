@@ -5,9 +5,8 @@ const { ApiResponse, AppError } = require('../utils/apiResponse');
 const { createRazorpayOrder, verifyPaymentSignature, fetchPaymentDetails } = require('../services/paymentService');
 const logger = require('../utils/logger');
 
-// Creates a Razorpay order for a given app order
 const createPaymentOrder = async (req, res, next) => {
-  const { orderId } = req.body; // Our internal order ID
+  const { orderId } = req.body;
 
   const order = await Order.findOne({ _id: orderId, user: req.user._id });
   if (!order) return next(new AppError('Order not found', 404));
@@ -16,7 +15,6 @@ const createPaymentOrder = async (req, res, next) => {
     return next(new AppError('Payment already completed for this order', 400));
   }
 
-  // Create Razorpay order
   const razorpayOrder = await createRazorpayOrder(
     order.totalAmount,
     order.orderId,
@@ -27,7 +25,6 @@ const createPaymentOrder = async (req, res, next) => {
     }
   );
 
-  // Create payment record
   await Payment.create({
     order: order._id,
     user: req.user._id,
@@ -43,7 +40,7 @@ const createPaymentOrder = async (req, res, next) => {
     amount: razorpayOrder.amount,
     currency: razorpayOrder.currency,
     keyId: process.env.RAZORPAY_KEY_ID,
-    // Pre-filled info for Razorpay popup
+
     prefill: {
       name: req.user.name,
       email: req.user.email,
@@ -56,14 +53,12 @@ const createPaymentOrder = async (req, res, next) => {
   }, 'Payment order created');
 };
 
-// Verifies Razorpay payment signature and marks order as paid
 const verifyPayment = async (req, res, next) => {
   const { razorpayOrderId, razorpayPaymentId, razorpaySignature, orderId } = req.body;
 
-  // 1. Verify signature (most critical step)
   const isValid = verifyPaymentSignature(razorpayOrderId, razorpayPaymentId, razorpaySignature);
   if (!isValid) {
-    // Mark payment as failed
+
     await Payment.findOneAndUpdate(
       { razorpayOrderId },
       { status: 'failed', errorDescription: 'Signature verification failed' }
@@ -71,7 +66,6 @@ const verifyPayment = async (req, res, next) => {
     return next(new AppError('Payment verification failed. Invalid signature.', 400));
   }
 
-  // 2. Fetch full payment details from Razorpay
   let paymentDetails;
   try {
     paymentDetails = await fetchPaymentDetails(razorpayPaymentId);
@@ -79,7 +73,6 @@ const verifyPayment = async (req, res, next) => {
     logger.warn('Could not fetch Razorpay payment details:', e.message);
   }
 
-  // 3. Update payment record
   const payment = await Payment.findOneAndUpdate(
     { razorpayOrderId },
     {
@@ -97,12 +90,11 @@ const verifyPayment = async (req, res, next) => {
 
   if (!payment) return next(new AppError('Payment record not found', 404));
 
-  // 4. Update order payment status
   const order = await Order.findById(payment.order);
   if (!order) return next(new AppError('Order not found', 404));
 
   order.paymentStatus = 'completed';
-  order.orderStatus = 'order_received'; // Confirm order
+  order.orderStatus = 'order_received';
   order.statusHistory.push({
     status: 'order_received',
     updatedBy: req.user._id,
@@ -110,7 +102,6 @@ const verifyPayment = async (req, res, next) => {
   });
   await order.save();
 
-  // 5. Clear the user's cart
   await Cart.findOneAndUpdate({ user: req.user._id }, { items: [], totalAmount: 0 });
 
   logger.info(`💳 Payment verified: ${razorpayPaymentId} for order ${order.orderId}`);

@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Password is required'],
       minlength: [8, 'Password must be at least 8 characters'],
-      select: false, // Don't return password by default
+      select: false,
     },
     role: {
       type: String,
@@ -38,18 +38,15 @@ const userSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
-    // Email verification
+
     emailVerificationToken: { type: String, select: false },
     emailVerificationExpires: { type: Date, select: false },
 
-    // Password reset
     passwordResetToken: { type: String, select: false },
     passwordResetExpires: { type: Date, select: false },
 
-    // Refresh tokens (stored as hashed)
     refreshTokens: [{ type: String, select: false }],
 
-    // Profile
     phone: { type: String, trim: true },
     avatar: { type: String, default: '' },
     addresses: [
@@ -86,14 +83,14 @@ userSchema.methods.comparePassword = async function (enteredPassword) {
 userSchema.methods.generateEmailVerificationToken = function () {
   const token = crypto.randomBytes(32).toString('hex');
   this.emailVerificationToken = crypto.createHash('sha256').update(token).digest('hex');
-  this.emailVerificationExpires = Date.now() + 24 * 60 * 60 * 1000; // 24 hours
-  return token; // Return unhashed token to send in email
+  this.emailVerificationExpires = Date.now() + 24 * 60 * 60 * 1000;
+  return token;
 };
 
 userSchema.methods.generatePasswordResetToken = function () {
   const token = crypto.randomBytes(32).toString('hex');
   this.passwordResetToken = crypto.createHash('sha256').update(token).digest('hex');
-  this.passwordResetExpires = Date.now() + 60 * 60 * 1000; // 1 hour
+  this.passwordResetExpires = Date.now() + 60 * 60 * 1000;
   return token;
 };
 

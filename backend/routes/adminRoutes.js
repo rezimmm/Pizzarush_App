@@ -8,7 +8,6 @@ const {
   getLowStockItems,
 } = require('../controllers/adminController');
 
-// All admin routes require auth + admin role
 router.use(protect, restrictTo('admin'));
 
 router.get('/analytics/overview', getOverviewStats);

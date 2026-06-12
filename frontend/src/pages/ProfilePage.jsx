@@ -10,10 +10,8 @@ export default function ProfilePage() {
   const dispatch = useDispatch();
   const { user, isLoading } = useSelector((s) => s.auth);
 
-  // Profile Form
   const { register, handleSubmit, reset } = useForm();
-  
-  // Address Form State
+
   const [showAddressForm, setShowAddressForm] = useState(false);
   const [editingIndex, setEditingIndex] = useState(null);
   
@@ -26,14 +24,13 @@ export default function ProfilePage() {
   }, [user, reset]);
 
   const onProfileSubmit = async (data) => {
-    // Retain existing addresses when updating personal info
+
     await dispatch(updateProfile({ ...data, addresses: user.addresses }));
   };
 
   const onAddressSubmit = async (data) => {
     let newAddresses = [...(user.addresses || [])];
-    
-    // If setting as default, clear others
+
     if (data.isDefault) {
       newAddresses = newAddresses.map(a => ({ ...a, isDefault: false }));
     }

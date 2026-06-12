@@ -40,7 +40,7 @@ const pizzaSchema = new mongoose.Schema(
       count: { type: Number, default: 0 },
     },
     tags: [{ type: String }],
-    // Ingredients used (for display purposes)
+
     ingredients: {
       base: { type: String },
       sauce: { type: String },
@@ -56,7 +56,7 @@ const pizzaSchema = new mongoose.Schema(
   }
 );
 
-pizzaSchema.index({ name: 'text', description: 'text' }); // Full-text search
+pizzaSchema.index({ name: 'text', description: 'text' });
 pizzaSchema.index({ category: 1, isAvailable: 1 });
 pizzaSchema.index({ price: 1 });
 

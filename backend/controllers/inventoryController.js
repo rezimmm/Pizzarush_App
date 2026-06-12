@@ -76,7 +76,6 @@ const updateInventoryItem = async (req, res, next) => {
 
   Object.assign(item, { category, itemName, quantity, threshold, price, unit, imageUrl });
 
-  // Log the change
   if (quantity !== undefined && quantity !== oldQuantity) {
     const diff = quantity - oldQuantity;
     item.logs.push({
@@ -92,7 +91,7 @@ const updateInventoryItem = async (req, res, next) => {
 };
 
 const adjustStock = async (req, res, next) => {
-  const { action, quantity, reason } = req.body; // action: 'add' | 'deduct' | 'adjust'
+  const { action, quantity, reason } = req.body;
 
   const item = await Inventory.findById(req.params.id);
   if (!item) return next(new AppError('Inventory item not found', 404));

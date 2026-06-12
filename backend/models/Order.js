@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const orderItemSchema = new mongoose.Schema({
   itemType: { type: String, enum: ['pizza', 'custom'], required: true },
   pizza: { type: mongoose.Schema.Types.ObjectId, ref: 'Pizza' },
-  // Snapshot to preserve order history even if pizza is deleted
+
   name: { type: String, required: true },
   image: { type: String, default: '' },
   quantity: { type: Number, required: true, min: 1 },
   unitPrice: { type: Number, required: true },
   totalPrice: { type: Number, required: true },
-  // Custom pizza details
+
   customDetails: {
     base: String,
     sauce: String,
@@ -39,14 +39,12 @@ const orderSchema = new mongoose.Schema(
     },
     items: [orderItemSchema],
 
-    // Pricing
     subtotal: { type: Number, required: true },
     discount: { type: Number, default: 0 },
     deliveryFee: { type: Number, default: 40 },
     taxes: { type: Number, default: 0 },
     totalAmount: { type: Number, required: true },
 
-    // Delivery address snapshot
     deliveryAddress: {
       street: { type: String, required: true },
       city: { type: String, required: true },
@@ -54,7 +52,6 @@ const orderSchema = new mongoose.Schema(
       pincode: { type: String, required: true },
     },
 
-    // Status
     orderStatus: {
       type: String,
       enum: ['order_received', 'in_kitchen', 'out_for_delivery', 'delivered', 'cancelled'],
@@ -62,7 +59,6 @@ const orderSchema = new mongoose.Schema(
     },
     statusHistory: [statusHistorySchema],
 
-    // Payment
     paymentStatus: {
       type: String,
       enum: ['pending', 'completed', 'failed', 'refunded'],
@@ -74,7 +70,6 @@ const orderSchema = new mongoose.Schema(
       default: 'razorpay',
     },
 
-    // Invoice
     invoiceUrl: { type: String, default: '' },
     notes: { type: String, default: '' },
 
@@ -99,7 +94,7 @@ orderSchema.pre('save', function (next) {
 });
 
 orderSchema.index({ user: 1, createdAt: -1 });
-// orderId index is auto-created by unique:true on the field
+
 orderSchema.index({ orderStatus: 1 });
 orderSchema.index({ paymentStatus: 1 });
 

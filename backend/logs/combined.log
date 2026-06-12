@@ -922,3 +922,10 @@
 [2026-06-12 15:55:37] info: 🔌 Socket disconnected: 1JSy-HowrzUKazY2AAAC | Reason: client namespace disconnect
 [2026-06-12 16:00:00] info: 🕐 Running low stock check...
 [2026-06-12 16:00:00] info: ✅ All inventory levels are healthy
+[2026-06-12 16:08:09] info: ✅ Socket.io initialized
+[2026-06-12 16:08:09] info: ⏰ Cron job scheduled: Low stock check every hour
+[2026-06-12 16:08:14] info: 🕐 Running low stock check...
+[2026-06-12 16:08:14] info: ✅ MongoDB Connected: ac-l2gbwup-shard-00-00.zzdnx4o.mongodb.net
+[2026-06-12 16:08:14] info: 🚀 Server running on port 5000 in development mode
+[2026-06-12 16:08:14] info: 📡 Socket.io ready for real-time connections
+[2026-06-12 16:08:18] info: ✅ All inventory levels are healthy

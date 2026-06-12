@@ -53,7 +53,7 @@ const cartSlice = createSlice({
     items: [],
     totalAmount: 0,
     isLoading: false,
-    isOpen: false,  // cart sidebar open state
+    isOpen: false,
     error: null,
   },
   reducers: {

@@ -6,22 +6,18 @@ const getAllPizzas = async (req, res) => {
 
   const filter = {};
 
-  // Text search
   if (search) {
     filter.$text = { $search: search };
   }
 
-  // Category filter
   if (category && ['veg', 'non-veg', 'vegan'].includes(category)) {
     filter.category = category;
   }
 
-  // Availability filter (default show all in admin, only available in customer view)
   if (available === 'true') {
     filter.isAvailable = true;
   }
 
-  // Sorting
   let sortOption = { createdAt: -1 };
   if (sort === 'price_asc') sortOption = { price: 1 };
   else if (sort === 'price_desc') sortOption = { price: -1 };

@@ -8,14 +8,12 @@ const {
   getAllOrders,
 } = require('../controllers/orderController');
 
-router.use(protect); // All order routes need auth
+router.use(protect);
 
-// Customer routes
 router.post('/', createOrder);
 router.get('/my-orders', getMyOrders);
 router.get('/:id', getOrderById);
 
-// Admin routes
 router.get('/admin/all', restrictTo('admin'), getAllOrders);
 router.patch('/:id/status', restrictTo('admin'), updateOrderStatus);
 

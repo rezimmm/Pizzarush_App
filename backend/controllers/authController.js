@@ -19,21 +19,19 @@ const sendTokens = async (res, user, statusCode = 200, message = 'Success') => {
   const refreshToken = generateRefreshToken({ id: user._id, role: user.role });
   const hashedRefreshToken = hashToken(refreshToken);
 
-  // Use atomic updates to prevent VersionError during concurrent requests
   await User.updateOne(
     { _id: user._id },
     {
       $push: {
         refreshTokens: {
           $each: [hashedRefreshToken],
-          $slice: -5 // Keep max 5 sessions per user
+          $slice: -5
         }
       },
       $set: { lastLogin: new Date() }
     }
   );
 
-  // Set refresh token as httpOnly cookie
   res.cookie('refreshToken', refreshToken, getRefreshTokenCookieOptions());
 
   const userData = {
@@ -52,23 +50,18 @@ const sendTokens = async (res, user, statusCode = 200, message = 'Success') => {
 const register = async (req, res, next) => {
   const { name, email, password } = req.body;
 
-  // Check if user already exists
   const existingUser = await User.findOne({ email });
   if (existingUser) {
     return next(new AppError('An account with this email already exists.', 409));
   }
 
-  // Create user
   const user = await User.create({ name, email, password });
 
-  // Generate verification token
   const verificationToken = user.generateEmailVerificationToken();
   await user.save({ validateBeforeSave: false });
 
-  // Build verification URL
   const verificationUrl = `${process.env.CLIENT_URL}/verify-email/${verificationToken}`;
 
-  // Send verification email (non-blocking)
   sendVerificationEmail(user, verificationUrl).catch((err) => {
     logger.error('Failed to send verification email:', err);
   });
@@ -122,7 +115,6 @@ const resendVerification = async (req, res, next) => {
 const login = async (req, res, next) => {
   const { email, password } = req.body;
 
-  // Include password in query (normally excluded)
   const user = await User.findOne({ email }).select('+password +refreshTokens');
 
   if (!user || !(await user.comparePassword(password))) {
@@ -155,7 +147,7 @@ const refreshAccessToken = async (req, res, next) => {
   const user = await User.findById(decoded.id).select('+refreshTokens');
 
   if (!user || !user.refreshTokens.includes(hashedToken)) {
-    // Possible token reuse attack — clear all sessions
+
     if (user) {
       user.refreshTokens = [];
       await user.save({ validateBeforeSave: false });
@@ -163,7 +155,6 @@ const refreshAccessToken = async (req, res, next) => {
     return next(new AppError('Session invalid. Please login again.', 401));
   }
 
-  // Rotate refresh token (atomically remove old token)
   await User.updateOne(
     { _id: user._id },
     { $pull: { refreshTokens: hashedToken } }
@@ -184,7 +175,6 @@ const logout = async (req, res, next) => {
     }
   }
 
-  // Clear cookie
   res.clearCookie('refreshToken', { path: '/', httpOnly: true });
   return ApiResponse.success(res, {}, 'Logged out successfully');
 };
@@ -201,7 +191,6 @@ const forgotPassword = async (req, res, next) => {
   const { email } = req.body;
   const user = await User.findOne({ email });
 
-  // Always return success to prevent email enumeration
   if (!user) {
     return ApiResponse.success(
       res,
@@ -239,7 +228,7 @@ const resetPassword = async (req, res, next) => {
   user.password = password;
   user.passwordResetToken = undefined;
   user.passwordResetExpires = undefined;
-  user.refreshTokens = []; // Invalidate all existing sessions
+  user.refreshTokens = [];
   await user.save();
 
   logger.info(`✅ Password reset for: ${user.email}`);

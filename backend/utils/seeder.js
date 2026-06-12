@@ -12,28 +12,25 @@ const connectDB = async () => {
 
 const seedInventory = async () => {
   const items = [
-    // Bases
+
     { category: 'base', itemName: 'Thin Crust', quantity: 100, threshold: 20, price: 0, unit: 'units' },
     { category: 'base', itemName: 'Thick Crust', quantity: 80, threshold: 20, price: 20, unit: 'units' },
     { category: 'base', itemName: 'Cheese Burst', quantity: 60, threshold: 15, price: 40, unit: 'units' },
     { category: 'base', itemName: 'Whole Wheat', quantity: 50, threshold: 15, price: 30, unit: 'units' },
     { category: 'base', itemName: 'Stuffed Crust', quantity: 40, threshold: 10, price: 50, unit: 'units' },
 
-    // Sauces
     { category: 'sauce', itemName: 'Tomato Sauce', quantity: 200, threshold: 30, price: 0, unit: 'units' },
     { category: 'sauce', itemName: 'BBQ Sauce', quantity: 150, threshold: 25, price: 15, unit: 'units' },
     { category: 'sauce', itemName: 'White Sauce', quantity: 120, threshold: 20, price: 20, unit: 'units' },
     { category: 'sauce', itemName: 'Garlic Sauce', quantity: 100, threshold: 20, price: 15, unit: 'units' },
     { category: 'sauce', itemName: 'Pesto Sauce', quantity: 80, threshold: 15, price: 25, unit: 'units' },
 
-    // Cheeses
     { category: 'cheese', itemName: 'Mozzarella', quantity: 200, threshold: 30, price: 0, unit: 'units' },
     { category: 'cheese', itemName: 'Cheddar', quantity: 150, threshold: 25, price: 20, unit: 'units' },
     { category: 'cheese', itemName: 'Parmesan', quantity: 100, threshold: 20, price: 25, unit: 'units' },
     { category: 'cheese', itemName: 'Mix Cheese', quantity: 120, threshold: 20, price: 30, unit: 'units' },
     { category: 'cheese', itemName: 'Vegan Cheese', quantity: 60, threshold: 15, price: 40, unit: 'units' },
 
-    // Veggies
     { category: 'veggie', itemName: 'Onion', quantity: 500, threshold: 50, price: 10, unit: 'units' },
     { category: 'veggie', itemName: 'Capsicum', quantity: 400, threshold: 50, price: 15, unit: 'units' },
     { category: 'veggie', itemName: 'Corn', quantity: 300, threshold: 40, price: 15, unit: 'units' },
@@ -44,7 +41,6 @@ const seedInventory = async () => {
     { category: 'veggie', itemName: 'Paneer', quantity: 150, threshold: 25, price: 30, unit: 'units' },
     { category: 'veggie', itemName: 'Broccoli', quantity: 100, threshold: 20, price: 25, unit: 'units' },
 
-    // Meats
     { category: 'meat', itemName: 'Chicken', quantity: 200, threshold: 30, price: 40, unit: 'units' },
     { category: 'meat', itemName: 'Pepperoni', quantity: 150, threshold: 25, price: 50, unit: 'units' },
     { category: 'meat', itemName: 'Sausage', quantity: 120, threshold: 20, price: 45, unit: 'units' },

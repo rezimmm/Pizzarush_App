@@ -10,10 +10,8 @@ const {
   deleteInventoryItem,
 } = require('../controllers/inventoryController');
 
-// Public route (for pizza builder to fetch available items)
 router.get('/available', getAvailableItems);
 
-// Admin-only routes
 router.use(protect, restrictTo('admin'));
 router.get('/', getAllInventory);
 router.get('/:id', getInventoryItem);

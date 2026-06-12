@@ -42,7 +42,7 @@ export const fetchMe = createAsyncThunk(
   'auth/fetchMe',
   async (_, { rejectWithValue }) => {
     try {
-      // Step 1: silently refresh to get a fresh access token via httpOnly cookie
+
       const refreshRes = await axios.post(
         `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/auth/refresh`,
         {},
@@ -50,14 +50,13 @@ export const fetchMe = createAsyncThunk(
       );
       const { accessToken } = refreshRes.data.data;
 
-      // Step 2: fetch the user profile with the fresh token
       const meRes = await api.get('/auth/me', {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
 
       return { user: meRes.data.data.user, accessToken };
     } catch {
-      // Refresh cookie missing/expired → treat as guest, no error
+
       return rejectWithValue(null);
     }
   }
@@ -82,7 +81,7 @@ const authSlice = createSlice({
     accessToken: null,
     isAuthenticated: false,
     isLoading: false,
-    isInitialized: false, // track first load
+    isInitialized: false,
     error: null,
   },
   reducers: {
@@ -104,7 +103,7 @@ const authSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    // Register
+
     builder
       .addCase(registerUser.pending, (state) => { state.isLoading = true; state.error = null; })
       .addCase(registerUser.fulfilled, (state) => { state.isLoading = false; })
@@ -114,7 +113,6 @@ const authSlice = createSlice({
         toast.error(action.payload);
       });
 
-    // Login
     builder
       .addCase(loginUser.pending, (state) => { state.isLoading = true; state.error = null; })
       .addCase(loginUser.fulfilled, (state, action) => {
@@ -132,7 +130,6 @@ const authSlice = createSlice({
         toast.error(action.payload);
       });
 
-    // Logout
     builder
       .addCase(logoutUser.fulfilled, (state) => {
         state.user = null;
@@ -142,25 +139,23 @@ const authSlice = createSlice({
         toast.success('Logged out successfully');
       });
 
-    // Fetch Me (on app load — refresh first, then /auth/me)
     builder
       .addCase(fetchMe.pending, (state) => { state.isLoading = true; })
       .addCase(fetchMe.fulfilled, (state, action) => {
         state.isLoading = false;
         state.user = action.payload.user;
-        state.accessToken = action.payload.accessToken; // store fresh token
+        state.accessToken = action.payload.accessToken;
         state.isAuthenticated = true;
         state.isInitialized = true;
       })
       .addCase(fetchMe.rejected, (state) => {
-        // Refresh cookie gone/invalid — treat as guest, no toast, no error
+
         state.isLoading = false;
         state.isAuthenticated = false;
         state.isInitialized = true;
         localStorage.removeItem('isLoggedIn');
       });
 
-    // Update Profile
     builder
       .addCase(updateProfile.fulfilled, (state, action) => {
         state.user = action.payload;

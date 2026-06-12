@@ -4,7 +4,7 @@ const Inventory = require('../models/Inventory');
 const { ApiResponse, AppError } = require('../utils/apiResponse');
 
 const calculateCustomPrice = (baseDetails, sauceDetails, cheeseDetails, veggiesDetails, meatsDetails) => {
-  const BASE_PRICE = 149; // Base pizza price
+  const BASE_PRICE = 149;
   const basePrice = baseDetails?.price || 0;
   const saucePrice = sauceDetails?.price || 0;
   const cheesePrice = cheeseDetails?.price || 0;
@@ -56,7 +56,6 @@ const addToCart = async (req, res, next) => {
   } else if (itemType === 'custom') {
     const { baseId, sauceId, cheeseId, veggieIds = [], meatIds = [] } = customPizza;
 
-    // Validate and fetch inventory items
     const [base, sauce, cheese] = await Promise.all([
       Inventory.findById(baseId),
       Inventory.findById(sauceId),

@@ -10,11 +10,11 @@ const razorpay = new Razorpay({
 const createRazorpayOrder = async (amount, receipt, notes = {}) => {
   try {
     const order = await razorpay.orders.create({
-      amount: Math.round(amount * 100), // Convert to paise
+      amount: Math.round(amount * 100),
       currency: 'INR',
       receipt,
       notes,
-      payment_capture: 1, // Auto capture payment
+      payment_capture: 1,
     });
 
     logger.info(`💳 Razorpay order created: ${order.id}`);

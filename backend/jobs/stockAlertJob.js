@@ -9,10 +9,9 @@ const checkLowStock = async () => {
 
     const lowStockItems = await Inventory.find({
       $expr: { $lte: ['$quantity', '$threshold'] },
-      isAvailable: false, // Only alert for items that went out/below threshold
+      isAvailable: false,
     });
 
-    // Also get items approaching threshold (within 20% above threshold)
     const approachingThreshold = await Inventory.find({
       $expr: {
         $and: [
@@ -46,7 +45,7 @@ const checkLowStock = async () => {
 };
 
 const startCronJobs = () => {
-  // Run every hour at minute 0
+
   cron.schedule('0 * * * *', checkLowStock, {
     scheduled: true,
     timezone: 'Asia/Kolkata',
@@ -54,9 +53,8 @@ const startCronJobs = () => {
 
   logger.info('⏰ Cron job scheduled: Low stock check every hour');
 
-  // Run immediately on startup in development for testing
   if (process.env.NODE_ENV === 'development') {
-    setTimeout(checkLowStock, 5000); // Run after 5s to allow DB to connect
+    setTimeout(checkLowStock, 5000);
   }
 };
 

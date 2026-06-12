@@ -30,13 +30,13 @@ app.use(cors({
 }));
 
 app.use(helmet({
-  // Allow Razorpay checkout iframes and scripts
+
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
       scriptSrc: [
         "'self'",
-        "'unsafe-inline'",     // needed by Razorpay checkout
+        "'unsafe-inline'",
         'https://checkout.razorpay.com',
         'https://checkout-static-next.razorpay.com',
         'https://api.razorpay.com',
@@ -61,7 +61,7 @@ app.use(helmet({
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
     },
   },
-  // Allow sensor APIs required by Razorpay's fraud-detection (sardine.ai)
+
   permissionsPolicy: {
     features: {
       accelerometer: ['*'],
@@ -70,18 +70,18 @@ app.use(helmet({
       payment: ['*'],
     },
   },
-  // Expose safe headers for Razorpay responses
-  crossOriginEmbedderPolicy: false,   // allow Razorpay iframe
+
+  crossOriginEmbedderPolicy: false,
   crossOriginResourcePolicy: false,
-  crossOriginOpenerPolicy: false,     // allow Razorpay popup to communicate with main window
+  crossOriginOpenerPolicy: false,
 }));
-app.use(mongoSanitize());                   // Sanitize against NoSQL query injection
-app.use(xssClean());                        // Sanitize against XSS attacks
-app.use(hpp());                             // Prevent HTTP Parameter Pollution
-app.use(compression());                     // Compress responses
+app.use(mongoSanitize());
+app.use(xssClean());
+app.use(hpp());
+app.use(compression());
 
 const globalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 1000,
   max: 500,
   message: { success: false, message: 'Too many requests, please try again later.' },
   standardHeaders: true,
@@ -90,7 +90,7 @@ const globalLimiter = rateLimit({
 
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: process.env.NODE_ENV === 'development' ? 1000 : 20, // Increased for dev
+  max: process.env.NODE_ENV === 'development' ? 1000 : 20,
   message: { success: false, message: 'Too many auth attempts, please try again later.' },
   standardHeaders: true,
   legacyHeaders: false,

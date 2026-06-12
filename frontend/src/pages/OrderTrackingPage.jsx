@@ -7,7 +7,6 @@ import { MapPin, Clock, CreditCard, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
 
-// Status keys must match backend Order model enum exactly
 const STEPS = [
   { key: 'order_received',    label: 'Order Received',   icon: '📋', desc: 'We got your order!' },
   { key: 'in_kitchen',        label: 'Preparing',         icon: '👨‍🍳', desc: 'Kitchen is cooking your pizza' },
@@ -30,25 +29,22 @@ export default function OrderTrackingPage() {
     dispatch(fetchOrderById(id));
   }, [dispatch, id]);
 
-  // Socket.io real-time updates
   useEffect(() => {
-    if (!accessToken) return; // Don't connect if not authenticated
+    if (!accessToken) return;
 
     const socket = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000', {
       withCredentials: true,
-      auth: { token: accessToken }, // Required by backend JWT middleware
+      auth: { token: accessToken },
     });
     socketRef.current = socket;
 
     socket.on('connect', () => {
-      // Use the correct event name that the backend listens for
+
       socket.emit('track_order', id);
     });
 
-    // Event name matches what backend emits: 'order_status_update'
     socket.on('order_status_update', (payload) => {
-      // Backend sends { orderId, orderStatus, updatedAt, note } not a full order
-      // Dispatch with the info we have to update currentOrder in Redux
+
       if (String(payload.orderId) === String(id)) {
         dispatch(updateOrderRealtime({ _id: id, orderStatus: payload.orderStatus }));
       }

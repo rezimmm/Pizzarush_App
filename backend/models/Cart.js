@@ -6,7 +6,7 @@ const customPizzaSchema = new mongoose.Schema({
   cheese: { type: mongoose.Schema.Types.ObjectId, ref: 'Inventory', required: true },
   veggies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Inventory' }],
   meats: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Inventory' }],
-  // Snapshot of names and prices at time of adding to cart
+
   baseDetails: { name: String, price: Number },
   sauceDetails: { name: String, price: Number },
   cheeseDetails: { name: String, price: Number },
@@ -20,14 +20,14 @@ const cartItemSchema = new mongoose.Schema({
     enum: ['pizza', 'custom'],
     required: true,
   },
-  // For predefined pizzas
+
   pizza: { type: mongoose.Schema.Types.ObjectId, ref: 'Pizza' },
   pizzaSnapshot: {
     name: String,
     price: Number,
     image: String,
   },
-  // For custom pizzas
+
   customPizza: customPizzaSchema,
 
   quantity: {
@@ -46,7 +46,7 @@ const cartSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true,
-      unique: true, // One cart per user
+      unique: true,
     },
     items: [cartItemSchema],
     totalAmount: {

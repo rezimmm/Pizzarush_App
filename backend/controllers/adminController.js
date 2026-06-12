@@ -75,7 +75,7 @@ const getRevenueTrend = async (req, res) => {
 };
 
 const getPopularItems = async (req, res) => {
-  // Most ordered pizza bases (from custom orders)
+
   const popularBases = await Order.aggregate([
     { $unwind: '$items' },
     { $match: { 'items.itemType': 'custom' } },
@@ -90,7 +90,6 @@ const getPopularItems = async (req, res) => {
     { $project: { name: '$_id', count: 1, _id: 0 } },
   ]);
 
-  // Most popular pizzas from menu
   const popularPizzas = await Order.aggregate([
     { $unwind: '$items' },
     { $match: { 'items.itemType': 'pizza' } },
@@ -106,7 +105,6 @@ const getPopularItems = async (req, res) => {
     { $project: { name: '$_id', count: 1, revenue: 1, _id: 0 } },
   ]);
 
-  // Popular toppings
   const popularVeggies = await Order.aggregate([
     { $unwind: '$items' },
     { $match: { 'items.itemType': 'custom', 'items.customDetails.veggies': { $exists: true } } },

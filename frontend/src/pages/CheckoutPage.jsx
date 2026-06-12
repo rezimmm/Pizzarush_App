@@ -16,7 +16,6 @@ export default function CheckoutPage() {
   const { items, totalAmount, isLoading } = useSelector((s) => s.cart);
   const { user } = useSelector((s) => s.auth);
 
-  // Get default address or first address from profile
   const defaultAddr = user?.addresses?.find((a) => a.isDefault) || user?.addresses?.[0] || {};
 
   const [address, setAddress] = useState({
@@ -63,7 +62,7 @@ export default function CheckoutPage() {
 
     try {
       if (paymentMethod === 'cod') {
-        // Cash on Delivery
+
         const orderRes = await api.post('/orders', {
           deliveryAddress: address,
           paymentMethod: 'cod',
@@ -73,7 +72,7 @@ export default function CheckoutPage() {
         toast.success('Order placed! Pay on delivery.');
         navigate(`/orders/${orderId}/track`);
       } else {
-        // ── Razorpay flow ─────────────────────────────────────────────────
+
         const loaded = await loadRazorpay();
         if (!loaded) {
           toast.error('Razorpay SDK failed to load. Check your internet.');
@@ -81,20 +80,17 @@ export default function CheckoutPage() {
           return;
         }
 
-        // Step 1: Create the app order
         const orderRes = await api.post('/orders', {
           deliveryAddress: address,
           paymentMethod: 'razorpay',
         });
         const order = orderRes.data.data.order;
 
-        // Step 2: Create Razorpay payment order using our order ID
         const payRes = await api.post('/payments/create-order', { orderId: order._id });
         const { razorpayOrderId, amount, currency, keyId } = payRes.data.data;
 
-        // Step 3: Open Razorpay popup
         const options = {
-          // Use key from backend response (always correct) or fallback to env var
+
           key: keyId || import.meta.env.VITE_RAZORPAY_KEY_ID,
           amount,
           currency: currency || 'INR',
@@ -104,7 +100,7 @@ export default function CheckoutPage() {
           prefill: { name: user?.name, email: user?.email, contact: user?.phone || '' },
           theme: { color: '#ff5a1f' },
           handler: async (response) => {
-            // Step 4: Verify payment signature on backend
+
             try {
               await api.post('/payments/verify', {
                 orderId: order._id,
