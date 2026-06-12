@@ -19,10 +19,15 @@ let _refreshPromise = null;
 export async function doRefresh() {
   if (_refreshPromise) return _refreshPromise;
 
+  const storedRefreshToken = localStorage.getItem('refreshToken');
+  
   _refreshPromise = axios
-    .post(`${API_URL}/auth/refresh`, {}, { withCredentials: true })
+    .post(`${API_URL}/auth/refresh`, { refreshToken: storedRefreshToken }, { withCredentials: true })
     .then((res) => {
-      const { accessToken } = res.data.data;
+      const { accessToken, refreshToken } = res.data.data;
+      if (refreshToken) {
+        localStorage.setItem('refreshToken', refreshToken);
+      }
       if (_store) {
 
         _store.dispatch({ type: 'auth/setAccessToken', payload: accessToken });

@@ -30,7 +30,8 @@ export const logoutUser = createAsyncThunk(
   'auth/logout',
   async (_, { rejectWithValue }) => {
     try {
-      await api.post('/auth/logout');
+      const storedRefreshToken = localStorage.getItem('refreshToken');
+      await api.post('/auth/logout', { refreshToken: storedRefreshToken });
     } catch (err) {
       return rejectWithValue(err.response?.data?.message);
     }
@@ -95,6 +96,7 @@ const authSlice = createSlice({
       state.isAuthenticated = false;
       state.isInitialized = true;
       localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('refreshToken');
     },
     clearError(state) {
       state.error = null;
@@ -123,6 +125,9 @@ const authSlice = createSlice({
         state.isAuthenticated = true;
         state.isInitialized = true;
         localStorage.setItem('isLoggedIn', 'true');
+        if (action.payload.refreshToken) {
+          localStorage.setItem('refreshToken', action.payload.refreshToken);
+        }
         toast.success(`Welcome back, ${action.payload.user.name}! 🍕`);
       })
       .addCase(loginUser.rejected, (state, action) => {
@@ -137,6 +142,7 @@ const authSlice = createSlice({
         state.accessToken = null;
         state.isAuthenticated = false;
         localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('refreshToken');
         toast.success('Logged out successfully');
       });
 
@@ -159,6 +165,7 @@ const authSlice = createSlice({
           state.user = null;
           state.accessToken = null;
           localStorage.removeItem('isLoggedIn');
+          localStorage.removeItem('refreshToken');
         }
         // For network/server errors, keep isAuthenticated as-is so the
         // user isn't falsely logged out on a transient failure.

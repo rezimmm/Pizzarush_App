@@ -45,7 +45,7 @@ const sendTokens = async (res, user, statusCode = 200, message = 'Success') => {
     addresses: user.addresses || [],
   };
 
-  return ApiResponse.success(res, { accessToken, user: userData }, message, statusCode);
+  return ApiResponse.success(res, { accessToken, refreshToken, user: userData }, message, statusCode);
 };
 
 const register = async (req, res, next) => {
@@ -165,7 +165,7 @@ const refreshAccessToken = async (req, res, next) => {
 };
 
 const logout = async (req, res, next) => {
-  const incomingRefreshToken = req.cookies?.refreshToken;
+  const incomingRefreshToken = req.cookies?.refreshToken || req.body?.refreshToken;
 
   if (incomingRefreshToken) {
     const hashedToken = hashToken(incomingRefreshToken);
