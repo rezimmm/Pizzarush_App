@@ -96,7 +96,7 @@ export default function AdminDashboardPage() {
         <p className="text-gray-400 mt-1">Welcome back! Here&apos;s what&apos;s happening.</p>
       </div>
 
-      {/* Stat Cards */}
+      {}
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
         <StatCard icon={ShoppingBag} label="Total Orders" value={orders.length} sub="All time" color="brand" />
         <StatCard icon={DollarSign} label="Total Revenue" value={`₹${totalRevenue.toFixed(0)}`} sub="All time" color="green" />
@@ -104,7 +104,7 @@ export default function AdminDashboardPage() {
         <StatCard icon={TrendingUp} label="Avg Order Value" value={`₹${avgOrderValue.toFixed(0)}`} sub="Per order" color="purple" />
       </div>
 
-      {/* Revenue Chart */}
+      {}
       <div className="card p-5">
         <h2 className="font-display font-bold text-lg text-white mb-5">Revenue (Last 7 Days)</h2>
         <ResponsiveContainer width="100%" height={220}>
@@ -125,7 +125,7 @@ export default function AdminDashboardPage() {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-5">
-        {/* Orders per day bar chart */}
+        {}
         <div className="card p-5">
           <h2 className="font-display font-bold text-lg text-white mb-5">Daily Orders</h2>
           <ResponsiveContainer width="100%" height={180}>
@@ -139,7 +139,7 @@ export default function AdminDashboardPage() {
           </ResponsiveContainer>
         </div>
 
-        {/* Order Status Pie */}
+        {}
         <div className="card p-5">
           <h2 className="font-display font-bold text-lg text-white mb-5">Order Status Breakdown</h2>
           {statusData.length > 0 ? (
@@ -160,7 +160,7 @@ export default function AdminDashboardPage() {
         </div>
       </div>
 
-      {/* Recent Orders */}
+      {}
       <div className="card overflow-hidden">
         <div className="px-5 py-4 border-b border-surface-border flex items-center justify-between">
           <h2 className="font-display font-bold text-lg text-white">Recent Orders</h2>

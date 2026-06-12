@@ -25,9 +25,9 @@ export default function AdminLayout() {
 
   return (
     <div className="min-h-screen bg-surface flex">
-      {/* Sidebar */}
+      {}
       <aside className="w-60 flex-shrink-0 bg-surface-card border-r border-surface-border flex flex-col fixed left-0 top-0 h-full z-40">
-        {/* Logo */}
+        {}
         <div className="flex items-center gap-2.5 px-5 py-5 border-b border-surface-border">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-brand">
             <Pizza size={18} className="text-white" />
@@ -38,7 +38,7 @@ export default function AdminLayout() {
           </div>
         </div>
 
-        {/* Nav */}
+        {}
         <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
           {NAV_ITEMS.map(({ to, label, icon: Icon, end }) => (
             <NavLink
@@ -56,7 +56,7 @@ export default function AdminLayout() {
           ))}
         </nav>
 
-        {/* User + Logout */}
+        {}
         <div className="border-t border-surface-border px-3 py-4 space-y-2">
           <div className="flex items-center gap-2.5 px-4 py-2">
             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
@@ -73,7 +73,7 @@ export default function AdminLayout() {
         </div>
       </aside>
 
-      {/* Main Content */}
+      {}
       <main className="flex-1 ml-60 min-h-screen overflow-x-hidden">
         <Outlet />
       </main>

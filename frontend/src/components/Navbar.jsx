@@ -43,7 +43,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 
-          {/* Logo */}
+          {}
           <Link to="/" className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-brand group-hover:shadow-brand-lg transition-all duration-200">
               <Pizza size={18} className="text-white" />
@@ -51,7 +51,7 @@ export default function Navbar() {
             <span className="font-display font-bold text-xl text-gradient">PizzaRush</span>
           </Link>
 
-          {/* Desktop Nav Links */}
+          {}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
@@ -81,7 +81,7 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Right Actions */}
+          {}
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <button
@@ -142,7 +142,7 @@ export default function Navbar() {
               </div>
             )}
 
-            {/* Mobile menu toggle */}
+            {}
             <button
               className="md:hidden btn-ghost p-2"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -154,7 +154,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {}
       {mobileOpen && (
         <div className="md:hidden bg-surface/95 backdrop-blur-md border-t border-surface-border animate-slide-down">
           <div className="px-4 py-3 space-y-1">
@@ -183,7 +183,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Backdrop for dropdowns */}
+      {}
       {(userMenuOpen || mobileOpen) && (
         <div className="fixed inset-0 z-[-1]" onClick={() => { setUserMenuOpen(false); setMobileOpen(false); }} />
       )}

@@ -49,12 +49,12 @@ export default function PizzaCard({ pizza, onViewDetails }) {
       className="card group cursor-pointer overflow-hidden"
       onClick={() => onViewDetails(pizza)}
     >
-      {/* Image */}
+      {}
       <div className="relative h-44 bg-gradient-to-br from-surface-elevated to-surface-card overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-500">
           🍕
         </div>
-        {/* Badges */}
+        {}
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">
           {pizza.category && (
             <span className="badge badge-brand text-[10px] px-2 py-0.5 gap-1">
@@ -72,18 +72,18 @@ export default function PizzaCard({ pizza, onViewDetails }) {
             <Star size={9} fill="currentColor" /> Bestseller
           </div>
         )}
-        {/* Gradient overlay */}
+        {}
         <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-surface-card to-transparent" />
       </div>
 
-      {/* Content */}
+      {}
       <div className="p-4 space-y-3">
         <div>
           <h3 className="font-display font-bold text-white group-hover:text-brand-400 transition-colors truncate">{pizza.name}</h3>
           <p className="text-xs text-gray-400 mt-0.5 line-clamp-2">{pizza.description}</p>
         </div>
 
-        {/* Prep time */}
+        {}
         {pizza.prepTime && (
           <div className="flex items-center gap-1 text-xs text-gray-400">
             <Clock size={11} />
@@ -91,7 +91,7 @@ export default function PizzaCard({ pizza, onViewDetails }) {
           </div>
         )}
 
-        {/* Size picker */}
+        {}
         <div className="flex gap-1.5" onClick={(e) => e.stopPropagation()}>
           {SIZES.map((s) => (
             <button
@@ -108,7 +108,7 @@ export default function PizzaCard({ pizza, onViewDetails }) {
           ))}
         </div>
 
-        {/* Crust picker */}
+        {}
         <div className="flex gap-1.5" onClick={(e) => e.stopPropagation()}>
           {CRUSTS.map((c) => (
             <button
@@ -125,7 +125,7 @@ export default function PizzaCard({ pizza, onViewDetails }) {
           ))}
         </div>
 
-        {/* Price & Add */}
+        {}
         <div className="flex items-center justify-between pt-1">
           <div>
             <span className="text-xl font-display font-bold text-white">₹{finalPrice}</span>

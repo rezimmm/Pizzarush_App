@@ -82,7 +82,7 @@ export default function AdminInventoryPage() {
         </button>
       </div>
 
-      {/* Add Item Form */}
+      {}
       {showAdd && (
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="card p-5">
           <div className="flex items-center justify-between mb-4">

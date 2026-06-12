@@ -71,7 +71,7 @@ export default function PizzaDetailModal({ pizza, onClose }) {
           className="bg-surface border border-surface-border rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Header Image */}
+          {}
           <div className="relative h-52 bg-gradient-to-br from-brand-900/40 to-surface-elevated flex items-center justify-center">
             <div className="text-8xl animate-float">🍕</div>
             <button onClick={onClose} className="absolute top-4 right-4 w-9 h-9 rounded-xl bg-surface/80 backdrop-blur-sm flex items-center justify-center text-gray-300 hover:text-white hover:bg-surface-elevated transition-colors">
@@ -84,7 +84,7 @@ export default function PizzaDetailModal({ pizza, onClose }) {
             )}
           </div>
 
-          {/* Body */}
+          {}
           <div className="p-5 space-y-4 max-h-[60vh] overflow-y-auto scrollbar-thin">
             <div>
               <div className="flex items-start justify-between gap-3">
@@ -101,7 +101,7 @@ export default function PizzaDetailModal({ pizza, onClose }) {
               )}
             </div>
 
-            {/* Toppings */}
+            {}
             {pizza.toppings?.length > 0 && (
               <div>
                 <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Included Toppings</p>
@@ -113,7 +113,7 @@ export default function PizzaDetailModal({ pizza, onClose }) {
               </div>
             )}
 
-            {/* Size */}
+            {}
             <div>
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Choose Size</p>
               <div className="grid grid-cols-3 gap-2">
@@ -134,7 +134,7 @@ export default function PizzaDetailModal({ pizza, onClose }) {
               </div>
             </div>
 
-            {/* Crust */}
+            {}
             <div>
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Choose Crust</p>
               <div className="flex gap-2">
@@ -152,7 +152,7 @@ export default function PizzaDetailModal({ pizza, onClose }) {
               </div>
             </div>
 
-            {/* Extra Toppings */}
+            {}
             <div>
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Extra Toppings</p>
               <div className="grid grid-cols-2 gap-2">
@@ -175,9 +175,9 @@ export default function PizzaDetailModal({ pizza, onClose }) {
             </div>
           </div>
 
-          {/* Footer */}
+          {}
           <div className="border-t border-surface-border p-5 flex items-center justify-between gap-4">
-            {/* Quantity */}
+            {}
             <div className="flex items-center gap-2 bg-surface-elevated rounded-xl p-1">
               <button onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                 className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-border transition-colors"

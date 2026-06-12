@@ -57,10 +57,10 @@ export default function MenuPage() {
 
   return (
     <div className="min-h-screen bg-surface pt-20">
-      {/* Hero */}
+      {}
       <section className="relative overflow-hidden bg-gradient-to-br from-surface-card via-surface to-surface pb-10 pt-14">
         <div className="absolute inset-0 hero-pattern opacity-50" />
-        {/* Glowing orbs */}
+        {}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-400/8 rounded-full blur-3xl pointer-events-none" />
 
@@ -77,7 +77,7 @@ export default function MenuPage() {
             </p>
           </motion.div>
 
-          {/* Search Bar */}
+          {}
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.4 }}
             className="mt-8 max-w-xl mx-auto"
@@ -104,10 +104,10 @@ export default function MenuPage() {
         </div>
       </section>
 
-      {/* Filters Bar */}
+      {}
       <div className="sticky top-16 z-30 bg-surface/95 backdrop-blur-md border-b border-surface-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
-          {/* Category Pills */}
+          {}
           <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-0.5">
             {CATEGORIES.map((cat) => (
               <button
@@ -124,7 +124,7 @@ export default function MenuPage() {
             ))}
           </div>
 
-          {/* Sort */}
+          {}
           <div className="relative flex-shrink-0">
             <button
               id="sort-dropdown-btn"
@@ -157,7 +157,7 @@ export default function MenuPage() {
         </div>
       </div>
 
-      {/* Pizza Grid */}
+      {}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {isLoading ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -198,7 +198,7 @@ export default function MenuPage() {
         )}
       </main>
 
-      {/* Detail Modal */}
+      {}
       {selectedPizza && (
         <PizzaDetailModal pizza={selectedPizza} onClose={() => setSelectedPizza(null)} />
       )}

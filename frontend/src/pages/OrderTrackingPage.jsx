@@ -73,12 +73,12 @@ export default function OrderTrackingPage() {
   return (
     <div className="min-h-screen bg-surface pt-20 pb-12">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back */}
+        {}
         <Link to="/orders" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-6 text-sm font-medium">
           <ArrowLeft size={16} /> All Orders
         </Link>
 
-        {/* Header */}
+        {}
         <div className="card p-5 mb-5">
           <div className="flex items-start justify-between gap-4">
             <div>
@@ -97,7 +97,7 @@ export default function OrderTrackingPage() {
           </div>
         </div>
 
-        {/* Live Tracking */}
+        {}
         {!isCancelled ? (
           <div className="card p-6 mb-5">
             <div className="flex items-center justify-between mb-6">
@@ -109,7 +109,7 @@ export default function OrderTrackingPage() {
             </div>
 
             <div className="relative">
-              {/* Progress Line */}
+              {}
               <div className="absolute left-5 top-5 bottom-5 w-0.5 bg-surface-elevated" />
               <div
                 className="absolute left-5 top-5 w-0.5 bg-gradient-to-b from-brand-500 to-brand-400 transition-all duration-1000"
@@ -127,7 +127,7 @@ export default function OrderTrackingPage() {
                       transition={{ delay: idx * 0.1 }}
                       className="relative flex items-start gap-4 pl-2"
                     >
-                      {/* Step circle */}
+                      {}
                       <div className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-lg transition-all duration-500 ${
                         active ? 'step-active ring-4 ring-brand-500/30 animate-pulse-slow' :
                         done ? 'step-done' : 'step-pending'
@@ -153,7 +153,7 @@ export default function OrderTrackingPage() {
           </div>
         )}
 
-        {/* Order Items */}
+        {}
         <div className="card p-5 mb-5">
           <h2 className="font-display font-bold text-lg text-white mb-4">Items Ordered</h2>
           <div className="space-y-3">
@@ -170,7 +170,7 @@ export default function OrderTrackingPage() {
           </div>
         </div>
 
-        {/* Address & Payment */}
+        {}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="card p-4">
             <h3 className="font-semibold text-white flex items-center gap-2 mb-2 text-sm">

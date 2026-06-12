@@ -61,14 +61,14 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* ── Public routes (with Navbar) ───────────────────── */}
+        {}
         <Route path="/" element={<PublicLayout><MenuPage /></PublicLayout>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
 
-        {/* ── Protected user routes ─────────────────────────── */}
+        {}
         <Route path="/checkout" element={
           <ProtectedRoute>
             <PublicLayout><CheckoutPage /></PublicLayout>
@@ -90,7 +90,7 @@ export default function App() {
           </ProtectedRoute>
         } />
 
-        {/* ── Admin routes ──────────────────────────────────── */}
+        {}
         <Route path="/admin" element={<AdminRoute><AdminLayout /></AdminRoute>}>
           <Route index element={<AdminDashboardPage />} />
           <Route path="orders" element={<AdminOrdersPage />} />
@@ -98,7 +98,7 @@ export default function App() {
           <Route path="pizzas" element={<AdminPizzasPage />} />
         </Route>
 
-        {/* ── Fallback ──────────────────────────────────────── */}
+        {}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

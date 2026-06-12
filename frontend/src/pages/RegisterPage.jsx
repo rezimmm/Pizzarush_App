@@ -55,7 +55,7 @@ export default function RegisterPage() {
         initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
         className="relative w-full max-w-md"
       >
-        {/* Logo */}
+        {}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2.5 group">
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-brand group-hover:shadow-brand-lg transition-all duration-200">
@@ -69,7 +69,7 @@ export default function RegisterPage() {
 
         <div className="card-elevated p-7 space-y-5">
           <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
-            {/* Name */}
+            {}
             <div>
               <label htmlFor="reg-name" className="input-label">Full Name</label>
               <input
@@ -83,7 +83,7 @@ export default function RegisterPage() {
               <p className="input-error">{errors.name?.message || '\u00A0'}</p>
             </div>
 
-            {/* Email */}
+            {}
             <div>
               <label htmlFor="reg-email" className="input-label">Email address</label>
               <input
@@ -97,7 +97,7 @@ export default function RegisterPage() {
               <p className="input-error">{errors.email?.message || '\u00A0'}</p>
             </div>
 
-            {/* Phone */}
+            {}
             <div>
               <label htmlFor="reg-phone" className="input-label">
                 Phone <span className="text-gray-500 font-normal">(optional)</span>
@@ -113,7 +113,7 @@ export default function RegisterPage() {
               <p className="input-error">{errors.phone?.message || '\u00A0'}</p>
             </div>
 
-            {/* Password */}
+            {}
             <div>
               <label htmlFor="reg-password" className="input-label">Password</label>
               <div className="relative">
@@ -135,7 +135,7 @@ export default function RegisterPage() {
               <p className="input-error">{errors.password?.message || '\u00A0'}</p>
             </div>
 
-            {/* Confirm Password */}
+            {}
             <div>
               <label htmlFor="reg-confirm-password" className="input-label">Confirm Password</label>
               <div className="relative">

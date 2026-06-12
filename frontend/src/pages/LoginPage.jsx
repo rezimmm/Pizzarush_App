@@ -30,7 +30,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-surface px-4 py-12">
-      {/* Background Effects */}
+      {}
       <div className="absolute inset-0 hero-pattern pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/8 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-brand-400/6 rounded-full blur-3xl pointer-events-none" />
@@ -39,7 +39,7 @@ export default function LoginPage() {
         initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
         className="relative w-full max-w-md"
       >
-        {/* Logo */}
+        {}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2.5 group">
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-brand group-hover:shadow-brand-lg transition-all duration-200">
@@ -51,10 +51,10 @@ export default function LoginPage() {
           <p className="mt-2 text-gray-400">Sign in to your account to order.</p>
         </div>
 
-        {/* Form Card */}
+        {}
         <div className="card-elevated p-7 space-y-5">
           <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
-            {/* Email */}
+            {}
             <div>
               <label htmlFor="login-email" className="input-label">Email address</label>
               <input
@@ -68,7 +68,7 @@ export default function LoginPage() {
               <p className="input-error">{errors.email?.message || '\u00A0'}</p>
             </div>
 
-            {/* Password */}
+            {}
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label htmlFor="login-password" className="input-label mb-0">Password</label>

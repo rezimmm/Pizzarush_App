@@ -163,9 +163,9 @@ export default function CheckoutPage() {
         </h1>
 
         <div className="grid lg:grid-cols-3 gap-6">
-          {/* Left: Address + Payment */}
+          {}
           <div className="lg:col-span-2 space-y-5">
-            {/* Delivery Address */}
+            {}
             <div className="card p-5 space-y-4">
               <h2 className="font-display font-bold text-lg text-white flex items-center gap-2">
                 <Tag size={18} className="text-brand-400" /> Delivery Address
@@ -194,7 +194,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            {/* Payment Method */}
+            {}
             <div className="card p-5 space-y-3">
               <h2 className="font-display font-bold text-lg text-white">Payment Method</h2>
               <div className="grid grid-cols-2 gap-3">
@@ -217,7 +217,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            {/* Order Items */}
+            {}
             <div className="card p-5 space-y-3">
               <h2 className="font-display font-bold text-lg text-white">Order Items ({items.length})</h2>
               <div className="space-y-2 max-h-64 overflow-y-auto scrollbar-thin pr-1">
@@ -259,7 +259,7 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          {/* Right: Order Summary */}
+          {}
           <div>
             <div className="card p-5 space-y-4 sticky top-24">
               <h2 className="font-display font-bold text-lg text-white">Order Summary</h2>

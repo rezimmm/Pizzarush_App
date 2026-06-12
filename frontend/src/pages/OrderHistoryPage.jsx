@@ -82,7 +82,7 @@ export default function OrderHistoryPage() {
                           </span>
                         </div>
 
-                        {/* Items summary */}
+                        {}
                         <p className="text-sm text-gray-400 truncate mb-2">
                           {order.items?.slice(0, 2).map((item) =>
                             `${item.pizza?.name || 'Custom Pizza'} x${item.quantity}`

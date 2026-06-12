@@ -29,20 +29,20 @@ export default function CartSidebar() {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
+          {}
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             onClick={() => dispatch(closeCart())}
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
           />
 
-          {/* Drawer */}
+          {}
           <motion.aside
             initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 280 }}
             className="fixed right-0 top-0 h-full w-full max-w-md z-50 flex flex-col bg-surface border-l border-surface-border shadow-2xl"
           >
-            {/* Header */}
+            {}
             <div className="flex items-center justify-between px-5 py-4 border-b border-surface-border">
               <div className="flex items-center gap-2">
                 <ShoppingBag size={20} className="text-brand-400" />
@@ -56,7 +56,7 @@ export default function CartSidebar() {
               </button>
             </div>
 
-            {/* Items */}
+            {}
             <div className="flex-1 overflow-y-auto px-5 py-4 space-y-3 scrollbar-thin">
               {items.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full gap-4 text-center">
@@ -128,7 +128,7 @@ export default function CartSidebar() {
               )}
             </div>
 
-            {/* Footer */}
+            {}
             {items.length > 0 && (
               <div className="border-t border-surface-border px-5 py-4 space-y-3">
                 <div className="flex items-center justify-between">
